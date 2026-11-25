@@ -18,6 +18,6 @@ Nhóm: 4thangtay · Lớp: L3B
 
 **Điều kiện cụ thể:**
 - Chỉ triển khai pilot trong phạm vi hẹp gồm `noi_dia` và `hang_nang`; loại trừ `quoc_te` và `doi_tac`.
-- Giám đốc vận hành kích hoạt 3 luật dừng tự động: ngắt trợ lý trong 30 phút nếu tỉ lệ mở lại cao hơn đối chứng ≥ 2 điểm hoặc vượt 6% trong 3 ngày liên tiếp.
+- Giám đốc vận hành kích hoạt luật dừng an toàn: ngắt trợ lý trong 30 phút nếu tỉ lệ mở lại cao hơn đối chứng ≥ 2 điểm hoặc vượt trần 6%; đồng thời dừng rollout khi có ít nhất 1 ca hoàn trùng trong 3 ngày liên tiếp.
 - Giữ mức xem lại 100% trong bước rollout 0.10 và chỉ giảm xem lại khi tỉ lệ sửa/bỏ < 15%.
 - Người phụ trách kiểm tra: Giám đốc vận hành LogiX-VN & PM trợ lý hoàn phí. Ngày kiểm tra mốc tiếp theo: 2027-01-05.
