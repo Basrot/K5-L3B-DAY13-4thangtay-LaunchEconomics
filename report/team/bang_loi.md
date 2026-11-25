@@ -29,7 +29,7 @@ Người gắn nhãn 1 là Lương Thị Hồng Hạnh. Người gắn nhãn 2 l
 | 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
 | 20 | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** **20/20 = 100%**, vượt ngưỡng 16/20. Cả hai bộ khớp 20/20 nhãn tham khảo. Việc gắn độc lập trước khi đối chiếu cần hai người gắn nhãn xác nhận. [Nhãn tham khảo](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md#nhãn-tham-khảo-cho-20-ca)
+**Tỉ lệ đồng thuận:** **20/20 = 100%**, vượt ngưỡng 16/20. Cả hai bộ khớp 20/20 nhãn tham khảo. Hạnh đã xác nhận cách gắn độc lập trong báo cáo cá nhân. Quy trình của Khang chờ Khang xác nhận. [Báo cáo Hạnh](2A202603748_LuongThiHongHanh.md) [Nhãn tham khảo](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md#nhãn-tham-khảo-cho-20-ca)
 
 ## Quy tắc phân biệt cho các ca không trùng
 

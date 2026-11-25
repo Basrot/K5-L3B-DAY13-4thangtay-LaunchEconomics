@@ -43,7 +43,7 @@ Gắn nhãn người 2 cho 20 ca CP3, tổng hợp hồ sơ launch v0 và chuẩ
 ### Đối chiếu sau khi lưu bộ nhãn
 
 - Với khóa tham khảo, bộ nhãn trên khớp **20/20** theo cả [hướng dẫn chi tiết](../../docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md#nhãn-tham-khảo-cho-20-ca) và [slide chữa, trang 71](../../docs/Ngay13_Slide_Launch_Economics.pdf#page=71). Slide chấp nhận *Hệ thống* cho ca 6 nếu yêu cầu trợ lý đối chiếu mục với mô tả, hoặc ca 13 nếu tập trung vào việc trợ lý báo giới hạn không rõ. Ca 18 thuộc *Ngữ cảnh* vì số tiền đúng. Điểm đối chiếu 20/20 dùng các nhãn chính trong khóa.
-- Đối chiếu cột người 2 với cột người 1 do Hạnh nộp ở PR #4 cho kết quả **20/20 ca (100%)**. Hai cột được giữ nguyên trong bảng tích hợp. Quy trình làm độc lập trước khi đối chiếu cần hai người xác nhận. [Bảng lỗi](bang_loi.md#hai-bộ-nhãn-độc-lập)
+- Đối chiếu cột người 2 với cột người 1 do Hạnh nộp ở PR #4 cho kết quả **20/20 ca (100%)**. Hai cột được giữ nguyên trong bảng tích hợp. Hạnh đã ghi xác nhận gắn độc lập trong báo cáo cá nhân. Quy trình của Khang chờ xác nhận. [Báo cáo Hạnh](2A202603748_LuongThiHongHanh.md) [Bảng lỗi](bang_loi.md#hai-bộ-nhãn-độc-lập)
 
 ### Hồ sơ và phiếu duyệt chéo
 
