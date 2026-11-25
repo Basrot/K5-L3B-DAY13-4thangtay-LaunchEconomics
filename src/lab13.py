@@ -90,6 +90,108 @@ def mo_hinh(runs, reqs, gia_vao=26, gia_ra=130, gia_tool=15, luong_phut=2000,
     )
 
 
+def kich_ban_do_nhay(runs, reqs):
+    base = mo_hinh(runs, reqs)
+    params = {
+        'Giá token gấp đôi': {'gia_vao': 52, 'gia_ra': 260},
+        'Giá token giảm một nửa': {'gia_vao': 13, 'gia_ra': 65},
+        'Tỉ lệ xem lại gấp đôi': {'he_so_xem_lai': 2},
+        'Tỉ lệ xem lại giảm một nửa': {'he_so_xem_lai': .5},
+        'Số ca làm lại gấp đôi': {'he_so_lam_lai': 2},
+        'Số ca làm lại giảm một nửa': {'he_so_lam_lai': .5},
+        'Lương nhân viên tăng 25%': {'luong_phut': 2500},
+        'Chỉ cho chạy tối đa 2 lần': {'max_lan_chay': 2},
+        'Chỉ cho chạy 1 lần': {'max_lan_chay': 1},
+    }
+    result = {}
+    for name, kw in params.items():
+        row = mo_hinh(runs, reqs, **kw)
+        result[name] = {**row, 'thay_doi_pct': (row['cps'] / base['cps'] - 1) * 100}
+    pair = mo_hinh(runs, reqs, gia_vao=52, gia_ra=260, he_so_xem_lai=2)
+    result['Giá token gấp đôi và xem lại gấp đôi'] = {
+        **pair, 'thay_doi_pct': (pair['cps'] / base['cps'] - 1) * 100}
+    return base, result
+
+
+def chi_phi_ca_he_thong(runs, reqs, k):
+    row = mo_hinh(runs, reqs, max_lan_chay=k)
+    failed = len(reqs) - row['thanh_cong']
+    return {**row, 'khong_thanh_cong': failed,
+            'tong_ca_he_thong': row['tong'] + failed * BASELINE}
+
+
+def kich_ban_xem_lai_100_phan_tram(runs, reqs, phut_lam_lai=9):
+    q = reqs[reqs['loai'].isin(['noi_dia', 'hang_nang'])].copy()
+    ids = set(q['request_id'])
+    r = runs[runs['request_id'].isin(ids)]
+    ok_ids = set(r.loc[r['status'] == 'ok', 'request_id'])
+    n_review = len(ok_ids)
+    n_rework = int((q['ket_qua'] == 'lam_lai').sum())
+    token = (r['tokens_in'] / 1000 * GIA_VAO + r['tokens_out'] / 1000 * GIA_RA).sum()
+    tool = (r['tool_calls'] * GIA_TOOL).sum()
+    review_cost = n_review * 5 * LUONG_PHUT
+    rework_cost = n_rework * phut_lam_lai * LUONG_PHUT
+    success = int((q['ket_qua'] == 'thanh_cong').sum())
+    total = token + tool + review_cost + rework_cost
+    return {'so_yeu_cau': len(q), 'so_yeu_cau_duoc_xem': n_review,
+            'so_lam_lai': n_rework, 'thanh_cong': success,
+            'token_tool': float(token + tool), 'tong': float(total),
+            'cps': float(total / success), 'baseline_ratio': float(total / success / BASELINE)}
+
+
+def co_mau_hai_ty_le(p1=.70, p2=.75, alpha=.05, power=.80):
+    from statistics import NormalDist
+    za, zb = NormalDist().inv_cdf(1 - alpha / 2), NormalDist().inv_cdf(power)
+    pbar = (p1 + p2) / 2
+    numerator = (za * math.sqrt(2 * pbar * (1 - pbar))
+                 + zb * math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))) ** 2
+    return math.ceil(numerator / (p2 - p1) ** 2)
+
+
+def bang_co_mau_d1(icc=.02):
+    n5, n6 = co_mau_hai_ty_le(.70, .75), co_mau_hai_ty_le(.70, .76)
+    de75 = 1 + 74 * icc
+    adjusted = math.ceil(n5 * de75)
+    per_staff = math.ceil(adjusted / 75)
+    m6 = math.ceil(n6 * (1 - icc) / (20 - n6 * icc))
+    return {'a_n_moi_nhanh_5_diem': n5, 'b_design_effect_m_75': de75,
+            'b_n_dieu_chinh_moi_nhanh': adjusted,
+            'b_nhan_vien_moi_nhanh': per_staff, 'b_tong_nhan_vien': per_staff * 2,
+            'c_tran_hieu_dung_moi_nhanh_20_nhan_vien': 20 / icc,
+            'd_tran_hieu_dung_moi_nhanh_6_depot': 6 / icc,
+            'e_n_moi_nhanh_6_diem': n6, 'e_yeu_cau_moi_nhan_vien': m6,
+            'e_design_effect': 1 + (m6 - 1) * icc}
+
+
+def in_bang_do_nhay(runs, reqs):
+    base, scenarios = kich_ban_do_nhay(runs, reqs)
+    print('\nB1 · CPS simulated; giá token theo bảng giả định')
+    print(f'Gốc: {base["cps"]:,.0f} đ')
+    for name, row in list(scenarios.items())[:9]:
+        print(f'{name}: {row["cps"]:,.0f} đ ({row["thay_doi_pct"]:+.1f}%)')
+    pair = scenarios['Giá token gấp đôi và xem lại gấp đôi']
+    print(f'B2 · Cặp token ×2 và xem lại ×2: {pair["cps"]:,.0f} đ ({pair["thay_doi_pct"]:+.1f}%). Xếp hạng: làm lại, xem lại, lương.')
+    print('\nB3 · Chi phí cả hệ thống')
+    for k in (1, 2, 3):
+        row = chi_phi_ca_he_thong(runs, reqs, k)
+        print(f'{k} lần: agent {row["tong"]:,.0f}; thất bại {row["khong_thanh_cong"]}; hệ thống {row["tong_ca_he_thong"]:,.0f}; CPS {row["cps"]:,.0f}')
+    print('\nB4 · Kiểm tra 100%')
+    for minutes in (9, 15.3):
+        row = kich_ban_xem_lai_100_phan_tram(runs, reqs, minutes)
+        print(f'{minutes:g} phút làm lại: {row["cps"]:,.0f} đ ({row["baseline_ratio"]:.2f}× baseline)')
+    print('\nD1 · Cỡ mẫu')
+    for name, value in bang_co_mau_d1().items():
+        print(f'{name}: {value}')
+    for name, frame in [('toàn mẫu', reqs), ('nội địa + hàng nặng', reqs[reqs.loai.isin(["noi_dia", "hang_nang"])])]:
+        n = frame['mo_lai_trong_7_ngay'].astype(int).sum()
+        print(f'Mở lại 7 ngày {name}: {n}/{len(frame)} = {n/len(frame):.2%}')
+    review = reqs[reqs['duoc_xem_lai'].astype(int) == 1]
+    ignored = review['quyet_dinh_xem_lai'].isin(['sua', 'bo']).sum()
+    primary = ((reqs['dong_trong_24h'].astype(int) == 1) & (reqs['mo_lai_trong_7_ngay'].astype(int) == 0)).sum()
+    print(f'E1 chính: {primary}/{len(reqs)} = {primary/len(reqs):.2%}')
+    print(f'E1 bỏ qua gợi ý: {ignored}/{len(review)} = {ignored/len(review):.2%}')
+
+
 if __name__ == '__main__':
     runs = pd.read_csv('logix_runs.csv')
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
@@ -137,7 +239,6 @@ if __name__ == '__main__':
             f'so_baseline={cps_pham_vi / BASELINE:.2f}x'
         )
 
-    # TODO CP2 · Nhiệm vụ B: đổi từng yếu tố, ghi vào bảng độ nhạy.
-    # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
+    in_bang_do_nhay(runs, reqs)
     #   from statsmodels.stats.proportion import proportion_effectsize
     #   from statsmodels.stats.power import NormalIndPower
