@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Bùi Phương Ngọc | | thengoc041012@gmail.com | BFNGOC | Người viết code |
+|   1 | Thiều Thế Ngọc | | thengoc041012@gmail.com | BFNGOC | Người viết code |
 |   2 | Nguyễn Gia Nam | 2A202603761 |mrbasrot@gmail.com | Basrot | Người kiểm số |
 |   3 | Đào Ngọc Hân | 2A202603779 | daongochan1505@gmail.com | | Người gắn nhãn 1 |
 |   4 | Trần Trọng Đức Tài | 2A202603732 | ductai202603732@gmail.com | DucTai2804 | Người gắn nhãn 2, kiêm giữ hồ sơ |
