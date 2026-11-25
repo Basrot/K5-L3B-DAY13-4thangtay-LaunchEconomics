@@ -1,6 +1,6 @@
 # Bảng chi phí · Nhiệm vụ A và B
 
-Số tính từ CSV bằng `src/lab13.py`. Các chi phí dựa trên phút `_simulated` được ghi nhãn `simulated`.
+Các thống kê mẫu, chi phí tính từ CSV giả lập và kết quả dự phóng trong A2–B4 đều là `[simulated]`. Nguồn tính là `src/lab13.py` và phép tính toàn hệ thống trình bày ở B4.
 
 ## A1 · Ba phép thử
 
@@ -28,7 +28,7 @@ CPS gấp **16,3 lần** hóa đơn token + tool chia số yêu cầu. Làm lạ
 
 ## A3 · Theo loại yêu cầu
 
-| Loại | Số yêu cầu | Tỉ lệ thành công | Lần chạy/yêu cầu | CPS `[simulated]` | So với 12.000 đ `[simulated]` |
+| Loại | Số yêu cầu `[simulated]` | Tỉ lệ thành công `[simulated]` | Lần chạy/yêu cầu `[simulated]` | CPS `[simulated]` | So với 12.000 đ `[simulated]` |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | `noi_dia` | 824 | 95,0% | 1,11 | 2.696 đ `[simulated]` | 0,22× `[simulated]` |
 | `hang_nang` | 158 | 74,1% | 1,47 | 8.221 đ `[simulated]` | 0,69× `[simulated]` |
@@ -41,7 +41,7 @@ CPS gấp **16,3 lần** hóa đơn token + tool chia số yêu cầu. Làm lạ
 
 Theo cách tính trong bài mẫu, sản lượng thành công quy đổi trong phạm vi là 45.000 × 900/1.200 = 33.750 việc/tháng. CPS biến đổi của phạm vi là 3.414 đ `[simulated]`, cộng thêm chi phí cố định 40 triệu đ/tháng theo output A4 trong code.
 
-| Khối lượng | Việc thành công/tháng | Cố định/việc | CPS gồm cố định `[simulated]` | So với baseline `[simulated]` |
+| Khối lượng giả định | Việc thành công/tháng `[simulated]` | Cố định/việc `[simulated]` | CPS gồm cố định `[simulated]` | So với baseline `[simulated]` |
 | --- | ---: | ---: | ---: | ---: |
 | 45.000 yêu cầu/tháng | 33.750 | 1.185 đ | 4.599 đ `[simulated]` | 0,38× `[simulated]` |
 | Nửa khối lượng | 16.875 | 2.370 đ | 5.784 đ `[simulated]` | 0,48× `[simulated]` |

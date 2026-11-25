@@ -27,7 +27,7 @@ Báo cáo ngắn gọn (tối đa 2 trang). Số liệu chi tiết nằm trong c
 
 ## 4. Kết quả chính
 
-- Chi phí mỗi việc thành công toàn mẫu: **4.472 đ [simulated]**, gấp **16,3 lần** hóa đơn token + tool (274,7 đ). Làm lại chiếm 51,8%, xem lại chiếm 40,7%.
+- Chi phí mỗi việc thành công toàn mẫu: **4.472 đ [simulated]**, gấp **16,3 lần** `[simulated]` hóa đơn token + tool (274,7 đ từ trace giả lập). Làm lại chiếm 51,8% `[simulated]`, xem lại chiếm 40,7% `[simulated]`.
 - Phạm vi tối ưu: Chỉ áp dụng cho `noi_dia` (2.696 đ, 0,22× baseline `[simulated]`) và `hang_nang` (8.221 đ, 0,69× baseline `[simulated]`). Loại bỏ `quoc_te` (22.515 đ, 1,88× baseline `[simulated]`) và `doi_tac` (10.215 đ, 0,85× baseline `[simulated]`).
 - Đã tính chi phí cố định 40 triệu đ/tháng: Đạt **4.599 đ/việc (0,38×)** ở mức 45.000 yc/tháng và **5.784 đ/việc (0,48×)** ở nửa khối lượng [simulated].
 - Đề xuất Gate 2a: **Go có điều kiện** (chỉ mở pilot cho nội địa + hàng nặng, kiểm soát ngưỡng mở lại trong 7 ngày không vượt trần 6%).
