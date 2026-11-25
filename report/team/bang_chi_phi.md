@@ -36,7 +36,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 | quoc_te | 150 | 27,3% | 2,32 | 22.515đ [simulated] | 1,88× [simulated] |
 | doi_tac | 68 | 54,4% | 1,88 | 10.215đ [simulated] | 0,85× [simulated] |
 
-- `quoc_te` không đáng xử lý: 22.515đ/việc thành công, **1,88×** baseline và chỉ thành công 27,3%. Tỉ lệ chạy ok giảm từ 30,0% lần 1 xuống 11,4% lần 2 và 2,2% lần 3, nên chạy lại không giúp [simulated].
+- `quoc_te` không đáng xử lý: 22.515đ/việc thành công, **1,88×** baseline và chỉ thành công 27,3%. Trần 1→2 lần tăng số thành công 32→41/150 nhưng CPS tăng 20.403→20.605đ; lần 3 không thêm thành công, CPS 22.515đ [simulated].
 
 ## A4 · Chi phí cố định (phạm vi noi_dia + hang_nang)
 
