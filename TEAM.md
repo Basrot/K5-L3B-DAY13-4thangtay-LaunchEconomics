@@ -27,12 +27,12 @@
 
 ## Đóng góp và bằng chứng
 
-Các phần việc dưới đây ghi theo phân công. Nhóm cập nhật đóng góp thực tế và dẫn chứng sau mỗi checkpoint.
+Bảng dưới ghi phần việc đã có đầu ra trong repo. Kết quả duyệt chéo được cập nhật sau khi có hồ sơ và ghi nhận của đội trình.
 
 | Thành viên | Phần việc phụ trách | Đóng góp thực tế và bằng chứng cần ghi |
 | --- | --- | --- |
-| Hồ Trọng Nghĩa | Code A–B, chỉ số và rủi ro E, tổng hợp báo cáo | Kết quả ba phép thử A1, commit phần A–B và mục do Nghĩa viết trong `chi_so.md`, `group_report.md`. |
-| Mai Xuân Khang | Gắn nhãn 2, tổng hợp hồ sơ E và ghi phiếu chấm | Bộ nhãn độc lập, hồ sơ launch v0 và phiếu chấm của buổi duyệt chéo. |
+| Hồ Trọng Nghĩa | Code A–B, chỉ số và rủi ro E, tổng hợp báo cáo | Triển khai A–B, đặc tả chỉ số và rủi ro, tổng hợp hai bộ nhãn và hồ sơ. [Mã tính](src/lab13.py) · [Báo cáo nhóm](report/team/group_report.md) · [Báo cáo cá nhân](report/team/2A202603729_HoTrongNghia.md). |
+| Mai Xuân Khang | Gắn nhãn 2, tổng hợp hồ sơ E và ghi phiếu chấm | Nộp 20 nhãn người 2, đối chiếu chi phí cả hệ thống, tổng hợp [hồ sơ launch](report/team/ho_so_launch_v0.md) và chuẩn bị [phiếu chấm](report/team/phieu_cham.md). [Báo cáo cá nhân](report/team/2A202603722_MaiXuanKhang.md) · [PR #3](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/pull/3) |
 | Lương Thị Hồng Hạnh | Gắn nhãn 1, tổng hợp C và viết kế hoạch D | Nộp 20 nhãn người 1 và đề xuất khắc phục năm ca ở [PR #4](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/pull/4). Soạn [kế hoạch pilot](report/team/pilot_plan.yaml) ở [PR #5](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/pull/5). [Báo cáo cá nhân](report/team/2A202603748_LuongThiHongHanh.md). |
 | Phạm Đăng Quang | Kiểm số A–B, tiếp quản code cho D1 và E1 | Đối chiếu tay A1 và hoàn thiện [bảng chi phí](report/team/bang_chi_phi.md). Bổ sung tính cỡ mẫu D1 và ba chỉ số E1 trong [src/lab13.py](src/lab13.py). [Báo cáo cá nhân](report/team/2A202603760_PhamDangQuang.md) |
 
