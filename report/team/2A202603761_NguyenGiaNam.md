@@ -4,6 +4,7 @@
 
 - Họ tên: Nguyễn Gia Nam
 - MSSV: 2A202603761
+- Email: mrbasrot@gmail.com
 - Vai trong nhóm: Người 2 — kiểm số, phụ trách độ nhạy B và cỡ mẫu D1
 
 ## 2. Phần việc phụ trách
