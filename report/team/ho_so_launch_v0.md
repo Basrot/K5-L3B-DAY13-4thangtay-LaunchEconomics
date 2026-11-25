@@ -6,9 +6,9 @@ Nhóm: 4thangtay · Lớp: L3B
 
 | Mục | Con số chính | Trạng thái | Người phụ trách |
 | --- | --- | --- | --- |
-| 1 · Chi phí mỗi việc thành công | ... | Giả lập | Kỹ sư trưởng mô hình chi phí |
+| 1 · Chi phí mỗi việc thành công | 4.472 đ [simulated] (toàn mẫu); 2.696 đ [sim] (nội địa); 8.221 đ [sim] (hàng nặng); gồm cố định: 4.599 đ [sim] (0,38×) | Giả lập | Kỹ sư trưởng mô hình chi phí |
 | 2 · Ba yếu tố nhạy nhất | ... | Giả lập | Chuyên viên phân tích độ nhạy |
-| 3 · So với nhân viên tự làm | ... | Giả lập | Chuyên viên phân tích độ nhạy |
+| 3 · So với nhân viên tự làm | 0,38× ở 45.000 yc/tháng và 0,48× ở nửa khối lượng (phạm vi noi_dia + hang_nang) so với mốc 12.000 đ [simulated] | Giả lập | Chuyên viên phân tích độ nhạy |
 | 4 · Chỉ số chính, chỉ số dùng, chỉ số an toàn | ... | Xong, có bằng chứng | Kỹ sư đo lường và chất lượng |
 | 5 · Bảng lỗi và cách khắc phục | 20 ca gắn nhãn (đồng thuận ...%), 5 ca khắc phục đo bằng event | Xong, có bằng chứng | Trưởng nhóm kiểm soát chất lượng |
 | 6 · Pilot plan | 20 nhân viên/nhóm (40 cụm), MDE 6 điểm (859 yc/nhóm, m ≥ 299), 3 luật dừng NẾU-TRONG-THÌ-KHÔNG THÌ | Xong, có bằng chứng | Giám đốc vận hành LogiX-VN |
