@@ -1,6 +1,6 @@
 # Bảng chi phí · Nhiệm vụ A và B
 
-Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` ghi nhãn `simulated`. Mỗi câu trả lời không quá ba dòng, có ít nhất một con số.
+Số tính bằng `src/lab13.py` trên trace và yêu cầu giả lập của lab. Nhãn `[simulated]` áp dụng cho thống kê mẫu và các kết quả phụ thuộc thời lượng giả lập. Mỗi câu trả lời không quá ba dòng, có ít nhất một con số.
 
 ## A1 · Ba phép thử đáp án biết trước
 
@@ -16,33 +16,33 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 
 | Khoản | Số tiền (đ) | Nguồn | Nhãn |
 | --- | ---: | --- | --- |
-| Token | `245.585` | `logix_runs.csv` | đo từ trace |
-| Tool | `84.000` | `logix_runs.csv` | đo từ trace |
-| Trong đó, phần của lần chạy thứ 2 và 3 | `93.804` | attempt lớn hơn 1 | đo từ trace |
+| Token | `245.585` | `logix_runs.csv` | trace giả lập `[simulated]` |
+| Tool | `84.000` | `logix_runs.csv` | trace giả lập `[simulated]` |
+| Trong đó, phần của lần chạy thứ 2 và 3 | `93.804` | attempt lớn hơn 1 | trace giả lập `[simulated]` |
 | Xem lại | `1.780.000` | `phut_xem_lai_simulated` | simulated |
 | Làm lại | `2.264.000` | `phut_lam_lai_simulated` | simulated |
 | Tổng chi phí | `4.373.585` | | có phần simulated |
-| Số việc thành công | `978` | `ket_qua` | đo từ dữ liệu |
+| Số việc thành công | `978` | `ket_qua` | CSV giả lập `[simulated]` |
 | Chi phí mỗi việc thành công | `4.472` | | simulated |
-| Hoá đơn token và tool chia cho số yêu cầu | `274,7` | | đo từ trace |
+| Hoá đơn token và tool chia cho số yêu cầu | `274,7` | | trace giả lập `[simulated]` |
 
 - Chi phí mỗi việc thành công gấp bao nhiêu lần "hoá đơn chia số yêu cầu"? Gấp **`16,3 lần`** (`4.472 ÷ 274,7`, `simulated`). Nếu tính thêm `222` ca không thành công do nhân viên làm thay (`12.000 đ/ca`), chi phí cả hệ thống là **`5.865 đ/yêu cầu` (`0,49×` mức `12.000 đ`, `simulated`)**.
 - Khoản nào chiếm tỉ trọng lớn nhất trong tổng chi phí, bao nhiêu phần trăm? **Làm lại** chiếm lớn nhất với **`2.264.000 đ` (`51,8%` tổng chi phí, `simulated`)**, tiếp theo là Xem lại **`1.780.000 đ` (`40,7%`, `simulated`)**; tổng giờ nhân viên chiếm **`92,5%` (`simulated`)**.
 
 ## A3 · Tách theo loại yêu cầu
 
-| Loại | Số yêu cầu | Tỉ lệ thành công | Số lần chạy mỗi yêu cầu | Chi phí mỗi việc thành công | So với 12.000 đ |
+| Loại | Số yêu cầu `[simulated]` | Tỉ lệ thành công `[simulated]` | Số lần chạy mỗi yêu cầu `[simulated]` | Chi phí mỗi việc thành công `[simulated]` | So với 12.000 đ `[simulated]` |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | `noi_dia` | `824` | `95,0%` | `1,11` | `2.696 đ` (`simulated`) | `0,22×` |
 | `hang_nang` | `158` | `74,1%` | `1,47` | `8.221 đ` (`simulated`) | `0,69×` |
 | `quoc_te` | `150` | `27,3%` | `2,32` | `22.515 đ` (`simulated`) | `1,88×` |
 | `doi_tac` | `68` | `54,4%` | `1,88` | `10.215 đ` (`simulated`) | `0,85×` |
 
-- Loại nào không đáng để trợ lý xử lý? Với loại đó, cho chạy lại tới 3 lần có giúp không? **`quoc_te`** không đáng để trợ lý xử lý vì tốn **`22.515 đ/việc` (`1,88×`, `simulated`)** và chỉ thành công **`27,3%`**. Chạy lại tới 3 lần không giúp vì tỉ lệ `ok` giảm từ **`30,0%` (lần 1) → `11,4%` (lần 2) → `2,2%` (lần 3)**; `doi_tac` (`0,85×`, có điều khoản riêng) cũng nên loại khỏi phạm vi pilot.
+- Loại nào không đáng để trợ lý xử lý? Với loại đó, cho chạy lại tới 3 lần có giúp không? **`quoc_te`** không đáng để trợ lý xử lý vì tốn **`22.515 đ/việc` (`1,88×`, `simulated`)** và chỉ thành công **27,3%** `[simulated]`. Thử lại đến lần thứ ba có lợi ích thấp vì tỉ lệ lượt `ok` giảm từ **30,0% → 11,4% → 2,2%** qua ba lượt `[simulated]`. Hoãn `doi_tac` vì thành công chỉ **54,4%** `[simulated]`, chi phí bằng **0,85×** định mức `[simulated]` và có điều khoản riêng.
 
 ## A4 · Chi phí cố định (phạm vi noi_dia + hang_nang)
 
-| Khối lượng | Việc thành công mỗi tháng | Chi phí cố định mỗi việc | Chi phí mỗi việc thành công + cố định | So với 12.000 đ |
+| Khối lượng giả định | Việc thành công mỗi tháng `[simulated]` | Chi phí cố định mỗi việc `[simulated]` | Chi phí mỗi việc thành công + cố định `[simulated]` | So với 12.000 đ `[simulated]` |
 | --- | ---: | ---: | ---: | ---: |
 | 45.000 yêu cầu/tháng | `33.750` | `1.185 đ` | `4.599 đ` (`simulated`) | `0,38×` |
 | Một nửa khối lượng (22.500/tháng) | `16.875` | `2.370 đ` | `5.784 đ` (`simulated`) | `0,48×` |
@@ -51,7 +51,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 
 ## B1 · Đổi từng yếu tố
 
-| Kịch bản | Cách tính | Chi phí mỗi việc thành công | Thay đổi (%) |
+| Kịch bản | Cách tính | Chi phí mỗi việc thành công | Thay đổi (%) `[simulated]` |
 | --- | --- | ---: | ---: |
 | Giá token gấp đôi | 52 đ và 260 đ cho 1.000 token; giá tool giữ nguyên | `4.723 đ` (`simulated`) | `+5,6%` |
 | Giá token giảm một nửa | 13 đ và 65 đ | `4.346 đ` (`simulated`) | `-2,8%` |
@@ -70,15 +70,15 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 
 ## B3 · Giới hạn chạy lại có thật sự rẻ hơn
 
-| Giới hạn | Tổng chi phí trợ lý | Số yêu cầu không thành công | Chi phí cả hệ thống | Chi phí mỗi việc thành công |
+| Giới hạn | Tổng chi phí trợ lý | Số yêu cầu không thành công `[simulated]` | Chi phí cả hệ thống | Chi phí mỗi việc thành công |
 | --- | ---: | ---: | ---: | ---: |
 | 1 lần | `3.621.781 đ` (`simulated`) | `319` | `7.449.781 đ` (`simulated`) | `4.111 đ` (`simulated`) |
 | 2 lần | `4.093.220 đ` (`simulated`) | `234` | **`6.901.220 đ`** (`simulated`) | `4.237 đ` (`simulated`) |
 | 3 lần | `4.373.585 đ` (`simulated`) | `222` | `7.037.585 đ` (`simulated`) | `4.472 đ` (`simulated`) |
 
-- Giới hạn nào rẻ nhất cho công ty? Có trùng với giới hạn cho chi phí mỗi việc thành công thấp nhất không? Giới hạn **2 lần** rẻ nhất cho cả công ty (**`6.901.220 đ`**, `simulated`), không trùng với mức có chi phí mỗi việc thành công thấp nhất (**1 lần**, `4.111 đ`, `simulated`). Giảm xuống 1 lần đẩy thêm **`85` yêu cầu** (`319 - 234`) sang nhân viên tự làm với giá `12.000 đ/ca`.
+- Giới hạn nào rẻ nhất cho công ty? Có trùng với giới hạn cho chi phí mỗi việc thành công thấp nhất không? Giới hạn **2 lần** rẻ nhất cho cả công ty (**`6.901.220 đ`**, `simulated`), không trùng với mức có chi phí mỗi việc thành công thấp nhất (**1 lần**, `4.111 đ`, `simulated`). Giảm xuống 1 lần đẩy thêm **85 yêu cầu** `[simulated]` (319 − 234) sang nhân viên tự làm với giá `12.000 đ/ca`.
 
 ## B4 · Nếu phải xem lại tất cả
 
-- Trong phạm vi `noi_dia` + `hang_nang`, xem lại toàn bộ `948` ca có lượt `ok` với `5 phút/ca`. Với `48` ca làm lại mất `9 phút/ca`, tổng chi phí là `10.568.513 đ`, tức **`11.743 đ/việc thành công` (`0,98×`, `simulated`)**. Dùng trung bình toàn mẫu đã làm tròn `15,3 phút/ca` cho làm lại, tổng là `11.173.313 đ`, tức **`12.415 đ/việc thành công` (`1,03×`, `simulated`)**.
+- Trong phạm vi `noi_dia` + `hang_nang`, xem lại toàn bộ 948 ca có lượt `ok` `[simulated]` với giả định 5 phút/ca. Với 48 ca làm lại `[simulated]` và giả định 9 phút/ca, tổng chi phí là **10.568.513 đ** `[simulated]`, tức **`11.743 đ/việc thành công` (`0,98×`, `simulated`)**. Dùng trung bình toàn mẫu đã làm tròn **15,3 phút/ca** `[simulated]` cho làm lại, tổng là **11.173.313 đ** `[simulated]`, tức **`12.415 đ/việc thành công` (`1,03×`, `simulated`)**.
 - Ngưỡng hòa vốn về thời gian xem lại là **`5,12 phút/ca`** nếu làm lại mất `9 phút/ca` và **`4,80 phút/ca`** nếu làm lại mất `15,3 phút/ca` (`simulated`). Pilot cần đo thời gian xem lại và mức giảm tỉ lệ xem lại có thể đạt mà vẫn giữ ngưỡng an toàn.

@@ -64,16 +64,16 @@ Chạy `python -B lab13.py` từ `src/` trên bản tích hợp. A1 đạt (1,20
 - Xem lại `890 × 2.000 = 1.780.000 đ` và làm lại `1.132 × 2.000 = 2.264.000 đ`, đều `simulated`. Tổng `4.373.585,132 / 978 = 4.471,97 đ/việc thành công` (`simulated`), khoảng 16,28 lần hóa đơn/yêu cầu (`simulated`). Theo B3, cộng `(1.200 − 978) × 12.000` rồi chia 1.200, được **5.864,65 đ/yêu cầu** (`simulated`).
 - Khi tách loại, lọc lượt chạy theo `request_id` thuộc từng loại. Tử số là tổng tiền token, tool và hai khoản thời lượng của loại đó.
 
-| Loại | Thành công / yêu cầu | Lượt chạy | Tổng trợ lý (đ, simulated) | Đ/việc thành công (simulated) | Cả hệ thống đ/yêu cầu, chưa có cố định (simulated) |
+| Loại | Thành công / yêu cầu `[simulated]` | Lượt chạy `[simulated]` | Tổng trợ lý (đ, simulated) | Đ/việc thành công (simulated) | Cả hệ thống đ/yêu cầu, chưa có cố định (simulated) |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | `noi_dia` | 783/824 | 916 | 2.110.687,298 | 2.696 | 3.159 |
 | `hang_nang` | 117/158 | 232 | 961.825,976 | 8.221 | 9.201 |
 | `quoc_te` | 41/150 | 348 | 923.121,766 | 22.515 | 14.874 |
 | `doi_tac` | 37/68 | 128 | 377.950,092 | 10.215 | 11.029 |
 
-Tỉ lệ lượt `ok` của `quoc_te` giảm từ 45/150 xuống 12/105 và 2/93 ở lượt 1–3. `doi_tac` còn ít dư địa so với 12.000 đ khi tính hết xử lý thủ công và có điều khoản riêng. Phạm vi xem xét gồm `noi_dia` và `hang_nang` với 900/982 việc thành công.
+Tỉ lệ lượt `ok` của `quoc_te` giảm từ 45/150 xuống 12/105 và 2/93 ở lượt 1–3 `[simulated]`. `doi_tac` còn ít dư địa so với 12.000 đ khi tính hết xử lý thủ công và có điều khoản riêng. Phạm vi xem xét gồm `noi_dia` và `hang_nang` với 900/982 việc thành công `[simulated]`.
 
-| A4 · Tổng yêu cầu toàn hệ thống/tháng | Việc thành công trong phạm vi, dự phóng | Cố định đ/việc | Đ/việc gồm cố định (simulated) | Cả hệ thống đ/yêu cầu trong phạm vi gồm cố định (simulated) |
+| A4 · Tổng yêu cầu toàn hệ thống/tháng | Việc thành công trong phạm vi, dự phóng `[simulated]` | Cố định đ/việc `[simulated]` | Đ/việc gồm cố định (simulated) | Cả hệ thống đ/yêu cầu trong phạm vi gồm cố định (simulated) |
 | ---: | ---: | ---: | ---: | ---: |
 | 45.000 | 33.750 | 1.185,19 | 4.599 | 5.217 |
 | 22.500 | 16.875 | 2.370,37 | 5.784 | 6.303 |
@@ -84,7 +84,7 @@ A4 dùng `số việc thành công/tháng = tổng yêu cầu/tháng × 900/1.20
 
 B1 đổi từng khoản so với A2, giữ nguyên mẫu số 978 trừ hai kịch bản cắt lượt. B2 thay hai khoản cùng lúc. Tất cả kết quả và mức thay đổi trong bảng đều `simulated`.
 
-| Kịch bản | Đ/việc thành công | Thay đổi so với A2 |
+| Kịch bản | Đ/việc thành công `[simulated]` | Thay đổi so với A2 `[simulated]` |
 | --- | ---: | ---: |
 | Token gấp đôi / giảm nửa | 4.723 / 4.346 | +5,6% / −2,8% |
 | Xem lại gấp đôi / giảm nửa | 6.292 / 3.562 | +40,7% / −20,3% |
@@ -98,13 +98,13 @@ Ba yếu tố nhạy nhất theo kịch bản đã tính là làm lại, xem l�
 
 B3 lọc `attempt ≤ k`. Mọi yêu cầu có `so_lan_chay > k` chuyển nhân viên và không tính phút xem lại/làm lại của trợ lý. Chi phí hệ thống bằng tổng trợ lý cộng `12.000 × (1.200 − số thành công)`.
 
-| Lượt tối đa | Thành công | Không thành công | Tổng trợ lý (đ, simulated) | Tổng cả hệ thống (đ, simulated) | Đ/yêu cầu (simulated) |
+| Lượt tối đa | Thành công `[simulated]` | Không thành công `[simulated]` | Tổng trợ lý (đ, simulated) | Tổng cả hệ thống (đ, simulated) | Đ/yêu cầu (simulated) |
 | ---: | ---: | ---: | ---: | ---: | ---: |
 | 1 | 881 | 319 | 3.621.780,644 | 7.449.780,644 | 6.208 |
 | 2 | 966 | 234 | 4.093.220,230 | 6.901.220,230 | 5.751 |
 | 3 | 978 | 222 | 4.373.585,132 | 7.037.585,132 | 5.865 |
 
-Hai lượt tối ưu tổng hệ thống theo B3. Một lượt thấp nhất trên mỗi việc thành công nhưng có thêm 85 ca nhân viên phải xử lý so với hai lượt.
+Hai lượt tối ưu tổng hệ thống theo B3. Một lượt thấp nhất trên mỗi việc thành công nhưng có thêm 85 ca nhân viên phải xử lý `[simulated]` so với hai lượt.
 
 B4 xem lại 5 phút cho từng yêu cầu có ít nhất một lượt `ok` (948/982), với 48 ca làm lại, 900 thành công và 224.513,274 đ tiền lượt chạy. Tính tổng bằng `224.513,274 + 948 × 5 × 2.000 + 48 × phút_làm_lại × 2.000`. Cột cuối cộng 82 ca xử lý thủ công và phần phân bổ 40 triệu đ/tháng ở quy mô 45.000 yêu cầu/tháng toàn hệ thống.
 
@@ -120,10 +120,10 @@ Bản code Quang dùng 15,3 phút, nên tổng theo giả định làm tròn là
 
 | Chỉ số | Phép đếm từ CSV | Kết quả |
 | --- | --- | ---: |
-| Chính | `dong_trong_24h = 1` và `mo_lai_trong_7_ngay = 0`, chia tổng yêu cầu | 994/1.200 = 82,83% |
-| Dùng | `sua` hoặc `bo`, trong tập `duoc_xem_lai = 1` | (41 + 7)/177 = 27,12% |
-| An toàn | `mo_lai_trong_7_ngay = 1`, chia tổng yêu cầu | 51/1.200 = 4,25% |
-| An toàn trong phạm vi | Cùng phép đếm trên nội địa và hàng nặng | 39/982 = 3,97% |
+| Chính | `dong_trong_24h = 1` và `mo_lai_trong_7_ngay = 0`, chia tổng yêu cầu | 994/1.200 = 82,83% `[simulated]` |
+| Dùng | `sua` hoặc `bo`, trong tập `duoc_xem_lai = 1` | (41 + 7)/177 = 27,12% `[simulated]` |
+| An toàn | `mo_lai_trong_7_ngay = 1`, chia tổng yêu cầu | 51/1.200 = 4,25% `[simulated]` |
+| An toàn trong phạm vi | Cùng phép đếm trên nội địa và hàng nặng | 39/982 = 3,97% `[simulated]` |
 
 Đây là các chỉ số mô tả mẫu giả lập của lab. Chênh lệch so với baseline 70% chưa ước lượng được tác động vì mẫu chưa có đối chứng. Bản đặc tả tích hợp có 12 event có `trace_id` và ba rủi ro, bao gồm dấu vết ghi sổ và thông báo cho ca 7, cùng tín hiệu phát hiện hoàn trùng cho ca 20. Cần kiểm tra ghi và nối event trước khi chạy pilot. [Đặc tả chỉ số và rủi ro](chi_so.md)
 

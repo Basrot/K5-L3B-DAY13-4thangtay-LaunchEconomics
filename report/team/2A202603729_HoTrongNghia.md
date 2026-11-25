@@ -19,7 +19,7 @@ Triển khai mô hình chi phí A–B, đặc tả chỉ số, event và rủi r
 
 ## 4. Bằng chứng
 
-Chạy `python -B lab13.py` trong `src/`. Ba phép thử A1 đạt **1,20 · 1,25 · 1,25** và chương trình in đủ A2–A4, B1–B4. Kiểm tra đối chiếu xác nhận giới hạn hai lượt có tổng chi phí hệ thống thấp nhất, đồng thời ba chỉ số mô tả lần lượt là **994/1.200**, **48/177** và **51/1.200**. [Mã và dữ liệu](../../src/README.md)
+Chạy `python -B lab13.py` trong `src/`. Ba phép thử A1 đạt **1,20 · 1,25 · 1,25** và chương trình in đủ A2–A4, B1–B4. Kiểm tra đối chiếu xác nhận giới hạn hai lượt có tổng chi phí hệ thống thấp nhất, đồng thời ba chỉ số mô tả từ mẫu giả lập lần lượt là **994/1.200**, **48/177** và **51/1.200** `[simulated]`. [Mã và dữ liệu](../../src/README.md)
 
 ## 5. Công cụ AI đã dùng
 

@@ -21,17 +21,17 @@ Nhóm xây dựng hồ sơ Gate 2a để quyết định có nên thử nghiệm
 
 ## 4. Kết quả
 
-- **A · Chi phí.** Ba phép thử A1 đạt **1,20 · 1,25 · 1,25**. Agent xử lý thành công 978/1.200 yêu cầu với chi phí **4.472 đ/việc thành công**. Chi phí cả hệ thống là **5.865 đ/yêu cầu**, sau khi cộng phần nhân viên xử lý các ca agent không hoàn thành (`simulated`). [Mã tính A1–A4](../../src/lab13.py)
-- **B · Độ nhạy.** Giới hạn **2 lượt** cho tổng chi phí hệ thống thấp nhất, **6.901.220 đ** cho 1.200 yêu cầu. Khi xem lại toàn bộ ca có lượt `ok` trong phạm vi nội địa và hàng nặng, chi phí đạt **11.743–12.415 đ/việc thành công**, tùy thời lượng làm lại (`simulated`). [Mã tính B1–B4](../../src/lab13.py)
+- **A · Chi phí.** Ba phép thử A1 đạt **1,20 · 1,25 · 1,25**. Mẫu giả lập có 978/1.200 yêu cầu agent hoàn thành với chi phí **4.472 đ/việc thành công** `[simulated]`. Chi phí cả hệ thống là **5.865 đ/yêu cầu** `[simulated]`, gồm phần nhân viên xử lý các ca agent không hoàn thành. [Mã tính A1–A4](../../src/lab13.py)
+- **B · Độ nhạy.** Giới hạn **2 lượt** cho tổng chi phí hệ thống thấp nhất, **6.901.220 đ** `[simulated]` cho 1.200 yêu cầu. Khi xem lại toàn bộ ca có lượt `ok` trong phạm vi nội địa và hàng nặng, chi phí đạt **11.743–12.415 đ/việc thành công** `[simulated]`, tùy thời lượng làm lại. [Mã tính B1–B4](../../src/lab13.py)
 - **C.** Hai bộ nhãn nộp ở PR #3 và #4 trùng **20/20 ca (100%)**. Bảng có năm biện pháp khắc phục. Hạnh và Khang gắn nhãn độc lập trước khi đối chiếu theo xác nhận của nhóm trưởng. [Bảng lỗi](bang_loi.md)
 - **D.** Kế hoạch chia **20 nhân viên mỗi nhánh**. Với MDE 6 điểm, thu **5.980 yêu cầu mỗi nhánh** (859 hiệu dụng) và theo dõi đủ bảy ngày sau đóng. Bước 20 người cần khoảng tám ngày thu mẫu ở mức 37,5 yêu cầu đủ điều kiện/người/ngày, hoặc khoảng mười ngày nếu cơ cấu phạm vi như mẫu. Power khoảng 64% nếu chênh thực là 5 điểm. [Kế hoạch pilot](pilot_plan.yaml)
-- **E.** Ba chỉ số mô tả lần lượt là đóng đúng hạn và không mở lại **82,83%**, sửa hoặc bỏ gợi ý **27,12%**, mở lại **4,25%**. Đặc tả có 12 event. Hồ sơ đề xuất **No-go** vì xem lại toàn bộ làm chi phí cả hệ thống lên **12.850–13.559 đ/yêu cầu** gồm thủ công và cố định, trên định mức 12.000 đ (`simulated`). [Đặc tả chỉ số](chi_so.md) · [Hồ sơ launch](ho_so_launch_v0.md)
+- **E.** Ba chỉ số trên mẫu giả lập lần lượt là đóng đúng hạn và không mở lại **82,83%** `[simulated]`, sửa hoặc bỏ gợi ý **27,12%** `[simulated]`, mở lại **4,25%** `[simulated]`. Đặc tả có 12 event. Hồ sơ đề xuất **No-go** vì xem lại toàn bộ làm chi phí cả hệ thống lên **12.850–13.559 đ/yêu cầu** `[simulated]`, gồm thủ công và cố định, trên định mức 12.000 đ/yêu cầu. [Đặc tả chỉ số](chi_so.md) · [Hồ sơ launch](ho_so_launch_v0.md)
 
 Phiếu Strawberry chấm đội trình đang chờ hồ sơ đã xác minh. Điểm Strawberry nhận từ hội đồng chờ ghi nhận của buổi duyệt chéo. [Phiếu chấm](phieu_cham.md)
 
 ## 5. Khó khăn và cách xử lý
 
-Tối ưu riêng chi phí agent có thể dịch việc sang nhân viên. Giới hạn 1 lượt có chi phí mỗi việc thành công thấp nhất, **4.111 đ** (`simulated`), đồng thời có thêm **85 yêu cầu không thành công** so với giới hạn 2 lượt. Phương án pilot cần theo dõi cả hai khoản chi phí và nêu rõ đánh đổi về cỡ mẫu hiệu dụng khi chọn đơn vị phân nhóm. [Kịch bản B3](../../src/lab13.py)
+Tối ưu riêng chi phí agent có thể dịch việc sang nhân viên. Giới hạn 1 lượt có chi phí mỗi việc thành công thấp nhất, **4.111 đ** (`simulated`), đồng thời có thêm **85 yêu cầu không thành công** `[simulated]` so với giới hạn 2 lượt. Phương án pilot cần theo dõi cả hai khoản chi phí và nêu rõ đánh đổi về cỡ mẫu hiệu dụng khi chọn đơn vị phân nhóm. [Kịch bản B3](../../src/lab13.py)
 
 ## 6. Tổng hợp đóng góp
 
