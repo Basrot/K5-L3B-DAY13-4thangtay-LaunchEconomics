@@ -85,7 +85,20 @@ Trong phạm vi có 982 yêu cầu, 948 có ít nhất một lượt `ok`, 48 ca
 
 - Xem lại mọi kết quả 5 phút, làm lại 9 phút/ca: **11.743 đ = 0,98×** baseline (`simulated`).
 - Nếu dùng thời gian làm lại trung bình 15,3 phút trong CSV: **12.415 đ = 1,03×** baseline (`simulated`).
-- Pilot cần đo thời gian xem lại thật và mức giảm kiểm tra vẫn đảm bảo an toàn. Thời gian xem lại hòa vốn khoảng 5,1 phút nếu làm lại mất 9 phút, hoặc 4,8 phút nếu làm lại 15,3 phút (`simulated`).
+- Các mức hòa vốn khoảng 5,1 phút (làm lại 9 phút) và 4,8 phút (làm lại 15,3 phút) chỉ xét chi phí agent trên mỗi việc thành công, chưa cộng nhân viên xử lý thay và chi phí cố định (`simulated`). Để trả lời theo chi phí toàn hệ thống, dùng cùng quy ước B3: cộng 12.000 đ cho mỗi yêu cầu agent không hoàn thành để nhân viên xử lý thay; phân bổ chi phí cố định theo A4.
+
+| Thời gian làm lại/ca | Agent + xem lại + làm lại | Nhân viên xử lý thay (82 × 12.000 đ) | Cố định (900 × 1.185,185 đ) | Tổng hệ thống | Tổng / 982 yêu cầu |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 9 phút | 10.568.513 đ `[simulated]` | 984.000 đ | 1.066.667 đ | 12.619.180 đ `[simulated]` | **12.850 đ/yêu cầu** `[simulated]` |
+| 15,3 phút | 11.173.313 đ `[simulated]` | 984.000 đ | 1.066.667 đ | 13.223.980 đ `[simulated]` | **13.466 đ/yêu cầu** `[simulated]` |
+
+**Cách phân bổ và ngưỡng quyết định:** phạm vi có 982 yêu cầu, 900 thành công và 82 không thành công; phần nhân viên xử lý thay tính theo 82 × 12.000 đ như B3. A4 quy đổi 45.000 yêu cầu/tháng thành 33.750 việc thành công/tháng (tỉ lệ 900/1.200), nên cố định là 40.000.000 / 33.750 = 1.185,185 đ/việc thành công; phân bổ cho 900 việc là 1.066.667 đ. Đây là các con số `[simulated]` theo giả định của bài.
+
+Với thời gian làm lại 15,3 phút/ca, để tổng hệ thống không vượt 12.000 đ × 982 yêu cầu, thời gian xem lại tối đa là **4,24 phút/ca được xem lại** `[simulated]`:
+
+`(982 × 12.000 − 224.513 token/tool − 48 × 15,3 × 2.000 làm lại − 82 × 12.000 xử lý thay − 900 × 1.185,185 cố định) / (948 ca được xem lại × 2.000 đ/phút) = 4,24 phút/ca`.
+
+Ở giả định làm lại 9 phút/ca, giới hạn tương ứng là 4,56 phút/ca `[simulated]`. Vì vậy, pilot cần đo thời gian thực; chỉ giảm tỷ lệ xem lại khi đồng thời đạt ngưỡng sửa + bỏ dưới 15% trong một tuần, không vi phạm luật an toàn và dự báo chi phí toàn hệ thống vẫn ≤ 12.000 đ/yêu cầu. Nếu không đạt, giữ nguyên bước hoặc dừng mở rộng.
 
 ## D1 · Cỡ mẫu
 
