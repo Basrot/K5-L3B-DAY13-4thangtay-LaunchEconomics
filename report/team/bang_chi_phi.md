@@ -110,4 +110,4 @@ Với thời gian làm lại 15,3 phút/ca, để tổng hệ thống không vư
 | d · 6 depot mỗi nhánh | Trần hiệu dụng 300 |
 | e · Chênh 6 điểm, 20 nhân viên mỗi nhánh | 859 mỗi nhánh; cần 299 yêu cầu/nhân viên; design effect 6,96 |
 
-**Bàn giao E1:** chỉ số chính 994/1.200 = **82,83%**; bỏ qua gợi ý 48/177 = **27,12%**; mở lại 7 ngày 51/1.200 = **4,25%**. Tỉ lệ mở lại trong phạm vi nội địa + hàng nặng là 39/982 = **3,97%**.
+**Bàn giao E1:** chỉ số chính 994/1.200 yêu cầu `[simulated]` = **82,83%** `[simulated]`; bỏ qua gợi ý 48/177 yêu cầu `[simulated]` = **27,12%** `[simulated]`; mở lại 7 ngày 51/1.200 yêu cầu `[simulated]` = **4,25%** `[simulated]`. Tỉ lệ mở lại trong phạm vi nội địa + hàng nặng là 39/982 yêu cầu `[simulated]` = **3,97%** `[simulated]`.

@@ -20,7 +20,7 @@
 # Chấp nhận mức chênh tối thiểu phát hiện được là 6 điểm (thay vì 5 điểm) để duy trì thiết kế ngẫu nhiên 20 cụm nhân viên; nếu mức chênh thật chỉ đạt 5 điểm thì power giảm xuống còn khoảng 0,64.
 #
 # Tỉ lệ mo_lai_trong_7_ngay hiện tại và ngưỡng an toàn đã chọn:
-# Tỉ lệ mở lại hiện tại là 4,25% trên toàn bộ mẫu 1.200 yêu cầu (3,97% trong phạm vi noi_dia + hang_nang). Ngưỡng an toàn dừng: nhóm trợ lý cao hơn đối chứng >= 2 điểm hoặc vượt trần 6,00%.
+# Tỉ lệ mở lại hiện tại là 4,25% trên toàn bộ mẫu 1.200 yêu cầu [simulated] (3,97% trong phạm vi noi_dia + hang_nang [simulated]). Ngưỡng an toàn dừng: nhóm trợ lý cao hơn đối chứng >= 2 điểm hoặc vượt trần 6,00%.
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN"                      # một người có tên vai trò, không ghi "cả đội"

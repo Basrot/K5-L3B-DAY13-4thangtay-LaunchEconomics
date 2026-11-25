@@ -17,7 +17,7 @@
 
 - Hoàn thành bộ 20 nhãn độc lập (cột Nhãn người 2) trong `report/team/bang_loi.md`, đạt độ chính xác cao theo nguyên nhân gốc.
 - Tính toán và cấu hình đầy đủ kế hoạch pilot trong `report/team/pilot_plan.yaml`, giải quyết bài toán trade-off cỡ mẫu cụm (chấp nhận MDE 6 điểm với 20 nhân viên mỗi nhóm, m >= 299 yêu cầu/nhân viên).
-- Soạn thảo 3 luật dừng bắt buộc cho kế hoạch pilot: luật an toàn (dựa trên baseline 4,25% mở lại trong 7 ngày), luật chi phí (trần 8.000 đ), luật mức sử dụng (tỉ lệ bỏ qua < 40%).
+- Soạn thảo 3 luật dừng bắt buộc cho kế hoạch pilot: luật an toàn (dựa trên baseline 4,25% mở lại trong 7 ngày `[simulated]`), luật chi phí (trần 8.000 đ), luật mức sử dụng (tỉ lệ bỏ qua < 40%).
 - Khởi tạo và đồng bộ hồ sơ launch v0 một trang bám sát 7 mục bắt buộc và quy chuẩn Gate 2a.
 
 ## 4. Bằng chứng

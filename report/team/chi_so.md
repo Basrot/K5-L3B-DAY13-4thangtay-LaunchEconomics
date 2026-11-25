@@ -4,13 +4,13 @@
 
 | Loại | Chỉ số | Công thức | Tính thử trên 1.200 yêu cầu |
 | --- | --- | --- | --- |
-| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu (`1.200`) | 82,83% (994 / 1.200) |
-| Dùng | Tỉ lệ bỏ qua gợi ý | `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu có `duoc_xem_lai` bằng 1 (`177`) | 27,12% (48 / 177) |
-| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu (`1.200`) | 4,25% (51 / 1.200) *(phạm vi `noi_dia + hang_nang`: 3,97%, 39 / 982)* |
+| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu (`1.200`) | 82,83% (994 / 1.200) `[simulated]` |
+| Dùng | Tỉ lệ bỏ qua gợi ý | `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu có `duoc_xem_lai` bằng 1 (`177`) | 27,12% (48 / 177) `[simulated]` |
+| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu (`1.200`) | 4,25% (51 / 1.200) `[simulated]` *(phạm vi `noi_dia + hang_nang`: 3,97%, 39 / 982 `[simulated]`)* |
 | Dùng | Nhóm tự đề xuất: % yêu cầu của nhóm can thiệp có nhân viên mở và xem gợi ý trợ lý | Số `request_id` duy nhất thuộc nhóm can thiệp có event `agent_suggestion_shown`, chia tổng số yêu cầu nhóm can thiệp trong phạm vi pilot | Không cần tính |
 | An toàn | Nhóm tự đề xuất: % đơn hoàn sai số tiền qua kiểm tra mẫu hằng tuần | Số đơn có `so_tien_da_hoan != so_tien_dung` trong event `audit_sample_checked`, chia tổng số đơn được kiểm tra mẫu trong tuần (tối thiểu 100 đơn/tuần, bắt lỗi ngầm như Ca 5, Ca 17) | Không cần tính |
 
-**Lưu ý diễn giải:** Chỉ số chính trong đợt chạy thử là **82,83%** (994/1.200 yêu cầu), tỉ lệ bỏ qua gợi ý là **27,12%** (48/177 yêu cầu được xem lại), và tỉ lệ lỗi lọt đến khách là **4,25%** (51/1.200 yêu cầu; phạm vi `noi_dia + hang_nang`: **3,97%**, 39/982). Không viết *"trợ lý đã nâng chỉ số"* vì đợt chạy thử không có nhóm đối chứng. *(Đã đối chiếu khớp 100% với đầu ra `src/lab13.py` và mục bàn giao E1 của Người 2 trong `report/team/bang_chi_phi.md`.)*
+**Lưu ý diễn giải:** Chỉ số chính trong đợt chạy thử giả lập là **82,83%** (994/1.200 yêu cầu) `[simulated]`, tỉ lệ bỏ qua gợi ý là **27,12%** (48/177 yêu cầu được xem lại) `[simulated]`, và tỉ lệ lỗi lọt đến khách là **4,25%** (51/1.200 yêu cầu) `[simulated]`; trong phạm vi `noi_dia + hang_nang`: **3,97%** (39/982) `[simulated]`. Không viết *"trợ lý đã nâng chỉ số"* vì đợt chạy thử không có nhóm đối chứng. *(Đã đối chiếu khớp 100% với đầu ra `src/lab13.py` và mục bàn giao E1 của Người 2 trong `report/team/bang_chi_phi.md`.)*
 
 ## Danh sách event
 
