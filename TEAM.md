@@ -12,9 +12,9 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 |        |      |       |        | Người viết code |
-|   2 |        |      |       |        | Người kiểm số |
+|   2 | Nguyễn Gia Nam | 2A202603761 |       | Basrot | Người kiểm số |
 |   3 |        |      |       |        | Người gắn nhãn 1 |
-|   4 | Trần Trọng Đức Tài | 2A202603732 | ductai202603732@gmail.com |        | Người gắn nhãn 2, kiêm giữ hồ sơ |
+|   4 | Trần Trọng Đức Tài | 2A202603732 | ductai202603732@gmail.com | DucTai2804 | Người gắn nhãn 2, kiêm giữ hồ sơ |
 
 Bốn vai của lab:
 
