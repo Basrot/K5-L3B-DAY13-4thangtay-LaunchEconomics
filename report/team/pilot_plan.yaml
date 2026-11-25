@@ -51,12 +51,15 @@ pilot:
     spillover_risk: "Nhân viên đối chứng học cách dùng từ nhóm can thiệp; giảm bằng quyền truy cập theo tài khoản + log lượt mở trợ lý theo staff_id"
     predeclared: "Chỉ số chính, ngưỡng dừng, luật dừng và ngày quyết định chốt trước ngày bắt đầu pilot"
   stop_rules:
-    - "NẾU có ít nhất 1 ca hoàn trùng đã xác nhận trong pilot hoặc tỷ lệ mở lại 7 ngày của nhánh can thiệp cao hơn đối chứng ít nhất 2 điểm phần trăm hay vượt 6% TRONG 3 ngày liên tiếp trên các yêu cầu đã đủ theo dõi THÌ Giám đốc vận hành tắt trợ lý trong 30 phút từ khi xác nhận vi phạm KHÔNG THÌ không được tăng tỷ lệ can thiệp khi cảnh báo còn mở"
+    - "NẾU phát hiện một trong các tín hiệu sau TRONG pilot: ở bất kỳ bước nào, tỷ lệ mở lại 7 ngày của nhánh can thiệp vượt 6% trên các yêu cầu đã đủ theo dõi, có ít nhất một ca hoàn trùng, hoặc thông báo đã hoàn nhưng đối soát thiếu bản ghi sổ cái thành công; từ bước 10 nhân viên can thiệp, tỷ lệ mở lại cao hơn đối chứng ít nhất 2 điểm phần trăm trong 3 ngày liên tiếp trên các yêu cầu đã đủ theo dõi. THÌ Giám đốc vận hành tắt trợ lý trong 30 phút từ khi xác nhận tín hiệu. KHÔNG THÌ không được tăng tỷ lệ can thiệp khi cảnh báo còn mở."
     - "NẾU chi phí đo trong pilot vượt 8.000 đ trên mỗi việc agent hoàn thành TRONG 2 tuần liên tiếp THÌ PM trợ lý hoàn phí thu hẹp về noi_dia và giới hạn 2 lần chạy KHÔNG THÌ không được mở rộng hang_nang trước khi kiểm tra lại chi phí"
     - "NẾU tỉ lệ bỏ qua gợi ý (sửa + bỏ trên ca được xem lại) > 40% TRONG 1 tuần THÌ Trưởng nhóm CSKH phỏng vấn 5 nhân viên trong 3 ngày KHÔNG THÌ không được chuyển bước rollout"
-  cost_measurement: "Tính chi phí token và tool của toàn bộ lượt chạy cộng tiền nhân công từ phút xem lại và làm lại đo thực. Chia cho số yêu cầu agent hoàn thành đã đủ theo dõi trong cùng kỳ của nhánh can thiệp."
+  cost_measurement: "Ngưỡng 8.000 đ tính trên nhóm yêu cầu nhánh can thiệp đã đủ theo dõi trong kỳ. Cộng token và tool của mọi lượt chạy cùng nhân công xem lại, làm lại đo thực của các yêu cầu đó, rồi chia cho số việc agent hoàn thành. Theo dõi riêng 40 triệu đ/tháng chi phí cố định trong A4 và E2."
   interim_looks: "Theo dõi an toàn, chi phí và mức sử dụng theo luật dừng. Kiểm định chỉ số chính sau khi đạt điều kiện chốt."
   rollback: "Giám đốc vận hành bấm cờ tắt, hiệu lực trong 30 phút; khách được phục vụ bằng luồng nhân viên tự làm (12.000 đ/yêu cầu)"
+  # Bước 20 người cần khoảng 8 ngày thu mẫu nếu mỗi người có 37,5 yêu cầu đủ điều kiện/ngày.
+  # Nếu phạm vi chiếm 982/1.200 như mẫu và lưu lượng chia đều, khoảng 10 ngày. Chốt theo số thu được.
+  # Bảy ngày theo dõi sau đóng tính riêng cho từng yêu cầu.
   decision_date: "2027-01-05"    # mốc dự kiến
   decision_condition: "Chỉ phân tích các yêu cầu đủ điều kiện từ bước 0.50 ở hai nhánh. Chốt khi mỗi nhánh đủ 20 nhân viên, ít nhất 299 yêu cầu/người và từ 5.980 yêu cầu thực, với cửa sổ đóng trong 24 giờ và đủ 7 ngày theo dõi sau đóng. Nếu chưa đạt ở ngày dự kiến, lùi ngày chốt và duy trì đối chứng nếu các luật dừng cho phép."
   simulated_inputs:               # mọi con số tính từ cột _simulated (phut_xem_lai_simulated, phut_lam_lai_simulated)

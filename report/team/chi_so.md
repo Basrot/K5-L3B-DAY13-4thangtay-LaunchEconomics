@@ -42,7 +42,7 @@ Mỗi event có `trace_id` để truy vết, `request_id` để nối các thao 
 
 ## E2 · Rủi ro kinh tế
 
-Mức tác động lấy từ đầu ra A4, B1 và B4. Ngưỡng theo dõi và hành động dưới đây là đề xuất để nhóm chốt trước pilot. [Mã tính](../../src/lab13.py) · [Bảng chi phí](bang_chi_phi.md)
+Mức tác động lấy từ đầu ra A4, B1 và B4. Ngưỡng 8.000 đ/việc trong pilot áp dụng cho token, tool và thời gian xem lại, làm lại đo thực. Chi phí cố định 40 triệu đ/tháng được theo dõi riêng theo khối lượng. [Kế hoạch pilot](pilot_plan.yaml) · [Mã tính](../../src/lab13.py) · [Bảng chi phí](bang_chi_phi.md)
 
 | Rủi ro | Tác động đã tính | Dấu hiệu theo dõi | Hành động | Người phụ trách |
 | --- | --- | --- | --- | --- |
