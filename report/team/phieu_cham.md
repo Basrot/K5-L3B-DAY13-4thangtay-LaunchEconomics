@@ -1,21 +1,22 @@
 # Phiếu chấm hội đồng Gate 2a
 
-Nhóm số n chấm nhóm số n + 1. Nhóm cuối chấm nhóm 1. Điểm dựa trên bằng chứng trong hồ sơ đội trình.
+Chấm theo bằng chứng trong hồ sơ nhóm tại thời điểm duyệt chéo. Điểm hội đồng tối đa 30, theo các mức 0 / 5 / 10 trong rubric C6–C8.
 
-- Nhóm chấm (hội đồng): Strawberry (L3B).
-- Nhóm được chấm: chờ xác nhận phân công và nhận hồ sơ của đội trình.
+- **Nhóm chấm (hội đồng):** 4thangtay (L3B)
+- **Nhóm được chấm:** Strawberry (L3B)
+- **Hồ sơ được xem:** [Hồ sơ launch](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/ho_so_launch_v0.md)
 
-| Tiêu chí | 0 điểm | 5 điểm | 10 điểm | Điểm | Lý do (có số) |
+| Tiêu chí | 0 điểm | 5 điểm | 10 điểm | Điểm | Lý do và bằng chứng |
 | --- | --- | --- | --- | ---: | --- |
-| Đề xuất khớp bằng chứng | Mâu thuẫn với số của chính nhóm | Khớp nhưng bỏ qua một con số bất lợi | Khớp, nêu cả con số bất lợi và cách xử lý | Chờ hồ sơ | Cần đề xuất và bảng độ nhạy của đội trình. |
-| Số giả lập và phạm vi | Thiếu nhãn và áp dụng cho mọi yêu cầu | Có nhãn hoặc phạm vi thu hẹp | Đủ nhãn và phạm vi thu hẹp có lý do bằng số | Chờ hồ sơ | Cần phạm vi và căn cứ chi phí của đội trình. |
-| Pilot ra được quyết định | Không đối chứng hoặc thiếu cỡ mẫu | Đủ cỡ mẫu, luật dừng chung chung | Tách được tác động, đủ mẫu, luật dừng có ngưỡng, thời hạn, người có quyền dừng | Chờ hồ sơ | Cần kế hoạch phân nhóm, cỡ mẫu hiệu dụng và luật dừng. |
-| **Tổng** | | | | **Chưa tính (thang 30)** | |
+| **C6 · Đề xuất khớp bằng chứng** | Mâu thuẫn với số của nhóm | Khớp nhưng bỏ qua số bất lợi | Nêu số bất lợi và cách xử lý | **10** | Nhóm chọn **No-go** vì kịch bản xem lại 100% làm chi phí cả hệ thống lên **12.850–13.559 đ/yêu cầu**, cao hơn mốc **12.000 đ** (`simulated`). Nhóm nêu điều kiện quay lại Gate 2a: xử lý ca 7 và 20, kiểm tra event truy vết, xác nhận phương án xem lại và nguồn lực pilot. [Hồ sơ, mục 7 và điều kiện](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/ho_so_launch_v0.md) · [Báo cáo nhóm](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/group_report.md) |
+| **C7 · Số giả lập và phạm vi** | Không nhãn, phạm vi mọi yêu cầu | Có nhãn hoặc thu hẹp phạm vi | Nhãn cho mọi số giả lập và lý do phạm vi bằng số | **10** | Bản mới đã ghi rõ ba chỉ số **82,83%**, **27,12%** và **4,25%** là `[simulated]` ngay trong hồ sơ launch. Các số ở A3 và phạm vi pilot cũng có nhãn; nhóm giới hạn pilot ở `noi_dia` và `hang_nang`, loại `quoc_te` do chi phí **1,88×**, hoãn `doi_tac` do thành công chỉ **54,4%**. Lý do phạm vi có căn cứ định lượng và được liên kết tới A3. [Hồ sơ, mục 4 và phạm vi](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/ho_so_launch_v0.md) · [Bảng chi phí A3](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/bang_chi_phi.md) · [Đặc tả chỉ số](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/chi_so.md) |
+| **C8 · Pilot ra được quyết định** | Không đối chứng hoặc thiếu mẫu | Đủ mẫu, luật dừng chung chung | Có đối chứng, đủ mẫu, luật dừng đo được và người có quyền dừng | **10** | Thiết kế có **20 nhân viên mỗi nhánh**, **5.980 yêu cầu mỗi nhánh** (859 hiệu dụng), theo dõi **7 ngày** sau khi đóng; phân nhóm ngẫu nhiên theo nhân viên, có đối chứng cùng thời gian. Luật dừng có ngưỡng mở lại **6%**, chênh **2 điểm** từ bước 10 người trong 3 ngày liên tiếp, sự cố hoàn trùng/sổ cái, ngưỡng chi phí và vai trò Giám đốc vận hành có quyền tắt trong 30 phút. [Kế hoạch pilot](https://github.com/Youngboy1609/K5-L3B-DAY13-Strawberry-LaunchEconomics/blob/main/report/team/pilot_plan.yaml) |
+| **Tổng** | | | | **30 / 30** | |
 
-**Quyết định của hội đồng:** Chờ hồ sơ và ghi nhận duyệt chéo.
+**Quyết định của hội đồng:** No-go cho đến khi các điều kiện quay lại Gate 2a trong hồ sơ được xác nhận.
 
-**Lý do:** Chưa có hồ sơ đội trình đã xác minh để đối chiếu theo ba tiêu chí.
+**Lý do:** Quyết định No-go phù hợp với kịch bản chi phí toàn hệ thống đang vượt mốc 12.000 đ/yêu cầu. Phần pilot được thiết kế khá cụ thể, nhưng nhóm cần khép kín điều kiện kinh tế và xử lý các lỗi an toàn trước khi xin mở lại cổng.
 
-**Một câu hỏi dự kiến cho đội trình:** Nếu phải xem lại 100% gợi ý trong tuần đầu, chi phí cả hệ thống trên mỗi yêu cầu là bao nhiêu khi cộng phần làm thủ công? Nhóm dùng ngưỡng an toàn nào để quyết định giảm xem lại?
+**Một câu hỏi cho đội trình:** Ở phương án xem lại 100%, nhóm chốt thời gian xem lại tối đa bao nhiêu phút mỗi ca để tổng chi phí gồm nhân viên xử lý thay và 40 triệu đồng chi phí cố định tháng không vượt 12.000 đ/yêu cầu? Ngưỡng này được đo và ai có quyền không cho pilot tăng bước nếu vượt?
 
-**Câu trả lời của đội trình (ghi lại tại buổi):** Chưa có ghi nhận đã xác minh.
+**Câu trả lời của đội trình (bổ sung bằng văn bản):** Theo phạm vi 982 yêu cầu, 948 ca có lượt `ok`, 48 ca làm lại, 82 ca nhân viên xử lý thay, 224.513 đ token/tool và 1.066.667 đ chi phí cố định phân bổ cho 900 việc thành công, tổng chi phí phải giữ dưới 11.784.000 đ. Vì vậy, thời gian xem lại thực tế tối đa là **4,24 phút/ca** ở kịch bản bảo thủ làm lại 15,3 phút/ca; với giả định làm lại 9 phút/ca, ngưỡng là **4,56 phút/ca**. `[simulated]` Đo phút xem lại từ `staff_review_decision.phut_xem_lai_thuc`, cộng chi phí token/tool, xem lại, làm lại, 82 ca nhân viên xử lý thay và phần cố định phân bổ, rồi chia cho 982 yêu cầu. Trưởng nhóm CSKH theo dõi và báo cáo; **Giám đốc vận hành**, chủ sở hữu pilot, có quyền không duyệt tăng bước nếu dự báo hoặc số đo vượt 12.000 đ/yêu cầu. Kế hoạch hiện có ngưỡng dừng 8.000 đ/việc agent hoàn thành nhưng chưa ghi riêng điều kiện trần chi phí toàn hệ thống 12.000 đ/yêu cầu; cần đưa điều kiện này vào luật dừng trước khi chạy pilot. [B4 và phép tính](bang_chi_phi.md#b4-nếu-phải-xem-lại-tất-cả) · [Kế hoạch pilot](pilot_plan.yaml)

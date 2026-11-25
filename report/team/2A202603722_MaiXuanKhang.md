@@ -48,7 +48,7 @@ Gắn nhãn người 2 cho 20 ca CP3, tổng hợp hồ sơ launch v0 và chuẩ
 ### Hồ sơ và phiếu duyệt chéo
 
 - [Hồ sơ launch v0](ho_so_launch_v0.md) tổng hợp đủ bảy mục. Đề xuất No-go tại Gate 2a dựa trên chi phí cả hệ thống khi xem lại toàn bộ và các điều kiện về an toàn, đo lường, cỡ mẫu cần kiểm chứng trước pilot.
-- [Phiếu chấm](phieu_cham.md) giữ thang 0/5/10 và câu hỏi dự kiến. Nhóm được chấm, điểm và quyết định chờ phân công cùng hồ sơ thật của đội trình.
+- Phiếu Strawberry chấm đội được phân công duyệt chéo được lưu ngoài repo. [Phiếu hội đồng chấm Strawberry](phieu_cham.md) lưu điểm nhận được và phản hồi của nhóm.
 
 ## 4. Bằng chứng
 

@@ -7,11 +7,13 @@
 | `pilot_plan.yaml` | D | Cả nhóm | Không còn dấu `?` ngoài dòng chú thích; đọc được bằng `yaml.safe_load` |
 | `chi_so.md` | E | Cả nhóm | Đặc tả chỉ số, danh sách event, rủi ro kinh tế |
 | `ho_so_launch_v0.md` | E | Người giữ hồ sơ | Một trang, bảy mục, dòng cuối là đề xuất |
-| `phieu_cham.md` | Duyệt chéo | Cả nhóm (làm hội đồng) | Phiếu nhóm mình chấm nhóm n + 1 |
+| `phieu_cham.md` | Duyệt chéo | Cả nhóm | Phiếu 4thangtay chấm Strawberry và phản hồi của nhóm ở cuối phiếu |
 | `group_report.md` | | Cả nhóm | Báo cáo nhóm ngắn |
 | `MSSV_HoTen.md` | | Từng thành viên | File mẫu. Mỗi người copy thành file riêng |
 
 Giữ nguyên tên các file trên để trợ giảng đối chiếu được.
+
+Phiếu Strawberry chấm đội được phân công duyệt chéo được lưu ngoài repo tại `C:\Users\lenovo\Downloads\phieu_cham.md`.
 
 Mỗi thành viên tạo thêm một báo cáo cá nhân:
 

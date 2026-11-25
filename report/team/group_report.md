@@ -27,7 +27,7 @@ Nhóm xây dựng hồ sơ Gate 2a để quyết định có nên thử nghiệm
 - **D.** Kế hoạch chia **20 nhân viên mỗi nhánh**. Với MDE 6 điểm, thu **5.980 yêu cầu mỗi nhánh** (859 hiệu dụng) và theo dõi đủ bảy ngày sau đóng. Bước 20 người cần khoảng tám ngày thu mẫu ở mức 37,5 yêu cầu đủ điều kiện/người/ngày, hoặc khoảng mười ngày nếu cơ cấu phạm vi như mẫu. Power khoảng 64% nếu chênh thực là 5 điểm. [Kế hoạch pilot](pilot_plan.yaml)
 - **E.** Ba chỉ số trên mẫu giả lập lần lượt là đóng đúng hạn và không mở lại **82,83%** `[simulated]`, sửa hoặc bỏ gợi ý **27,12%** `[simulated]`, mở lại **4,25%** `[simulated]`. Đặc tả có 12 event. Hồ sơ đề xuất **No-go** vì xem lại toàn bộ làm chi phí cả hệ thống lên **12.850–13.559 đ/yêu cầu** `[simulated]`, gồm thủ công và cố định, trên định mức 12.000 đ/yêu cầu. [Đặc tả chỉ số](chi_so.md) · [Hồ sơ launch](ho_so_launch_v0.md)
 
-Phiếu Strawberry chấm đội trình đang chờ hồ sơ đã xác minh. Điểm Strawberry nhận từ hội đồng chờ ghi nhận của buổi duyệt chéo. [Phiếu chấm](phieu_cham.md)
+Nhóm đã nhận **30/30** điểm hội đồng từ 4thangtay. Strawberry đã trả lời câu hỏi về ngưỡng xem lại 100% và quyền quyết định tăng bước trong [phiếu chấm nhận được](phieu_cham.md). Phiếu Strawberry dùng để chấm đội được phân công duyệt chéo được lưu ngoài repo theo hướng dẫn của nhóm.
 
 ## 5. Khó khăn và cách xử lý
 
