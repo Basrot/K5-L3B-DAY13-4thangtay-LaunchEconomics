@@ -37,7 +37,7 @@ CPS gấp **16,3 lần** hóa đơn token + tool chia số yêu cầu. Làm lạ
 
 `quoc_te` không đáng xử lý: CPS **22.515 đ (1,88×)**, chỉ 27,3% thành công. Tỉ lệ lần chạy `ok` ở attempt 1/2/3 là 30,0%/11,4%/2,2%; chạy lại không giúp đáng kể.
 
-## A4 · Chi phí cố định trong phạm vi nội địa + hàng nặng
+- `quoc_te` không đáng xử lý: 22.515đ/việc thành công, **1,88×** baseline và chỉ thành công 27,3%. Trần 1→2 lần tăng số thành công 32→41/150 nhưng CPS tăng 20.403→20.605đ; lần 3 không thêm thành công, CPS 22.515đ [simulated].
 
 Theo cách tính trong bài mẫu, sản lượng thành công quy đổi là 45.000 × 900/1.200 = 33.750 việc/tháng. CPS biến đổi của phạm vi cộng theo output A4 trong code.
 

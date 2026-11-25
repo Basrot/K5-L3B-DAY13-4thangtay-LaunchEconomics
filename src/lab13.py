@@ -7,9 +7,6 @@ import math
 import sys
 import pandas as pd
 
-if hasattr(sys.stdout, 'reconfigure'):
-    sys.stdout.reconfigure(encoding='utf-8')
-
 # Bảng giá GIẢ ĐỊNH của lab (không phải giá thật của nhà cung cấp nào)
 GIA_VAO = 26        # đồng cho 1.000 token đầu vào
 GIA_RA = 130        # đồng cho 1.000 token đầu ra
@@ -193,12 +190,21 @@ def in_bang_do_nhay(runs, reqs):
 
 
 if __name__ == '__main__':
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
     runs = pd.read_csv('logix_runs.csv')
     reqs = pd.read_csv('logix_requests.csv', keep_default_na=False)
     kiem_tra_dap_an_biet_truoc()
     ket_qua = mo_hinh(runs, reqs)
+    nhan_gia_tri = {
+        'xem_lai': 'simulated',
+        'lam_lai': 'simulated',
+        'tong': 'có phần simulated',
+        'cps': 'simulated',
+    }
     for ten, gia_tri in ket_qua.items():
-        print(f'{ten:12s} {gia_tri:>14,.0f}')
+        nhan = nhan_gia_tri.get(ten, '')
+        print(f'{ten:12s} {gia_tri:>14,.0f} {nhan}')
 
     # Nhiệm vụ A3 · Tách chi phí theo loại yêu cầu.
     print('\nA3 · Chi phí theo loại yêu cầu')
@@ -210,7 +216,8 @@ if __name__ == '__main__':
             f'{loai:12s} yeu_cau={n:4,d}  '
             f'thanh_cong={kq["thanh_cong"] / n:6.1%}  '
             f'lan_chay/yc={nhom["so_lan_chay"].sum() / n:5.2f}  '
-            f'cps={kq["cps"]:9,.0f}  so_baseline={kq["cps"] / BASELINE:5.2f}x'
+            f'cps={kq["cps"]:9,.0f} [simulated]  '
+            f'so_baseline={kq["cps"] / BASELINE:5.2f}x [simulated]'
         )
 
     # Tỉ lệ ok theo lần thử giúp giải thích liệu chạy lại có cải thiện A3 không.
@@ -235,8 +242,8 @@ if __name__ == '__main__':
             f'{yeu_cau_thang:,.0f} yeu_cau/thang  '
             f'thanh_cong={thanh_cong_thang:,.0f}  '
             f'co_dinh/viec={co_dinh_moi_viec:,.0f}  '
-            f'cps+co_dinh={cps_pham_vi:,.0f}  '
-            f'so_baseline={cps_pham_vi / BASELINE:.2f}x'
+            f'cps+co_dinh={cps_pham_vi:,.0f} [simulated]  '
+            f'so_baseline={cps_pham_vi / BASELINE:.2f}x [simulated]'
         )
 
     in_bang_do_nhay(runs, reqs)
