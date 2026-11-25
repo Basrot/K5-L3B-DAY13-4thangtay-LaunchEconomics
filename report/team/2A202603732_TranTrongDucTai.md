@@ -4,7 +4,7 @@
 
 - Họ tên: Trần Trọng Đức Tài
 - MSSV: 2A202603732
-- Email: ductai202603732@gmail.com
+- Email: 26ai.taittd@vinuni.edu.vn
 - Vai trong nhóm: Người gắn nhãn 2 kiêm giữ hồ sơ
 
 ## 2. Phần việc phụ trách
