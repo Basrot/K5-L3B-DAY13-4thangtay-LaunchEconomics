@@ -20,11 +20,11 @@
 # Chấp nhận mức chênh tối thiểu phát hiện được là 6 điểm (thay vì 5 điểm) để duy trì thiết kế ngẫu nhiên 20 cụm nhân viên; nếu mức chênh thật chỉ đạt 5 điểm thì power giảm xuống còn khoảng 0,64.
 #
 # Tỉ lệ mo_lai_trong_7_ngay hiện tại và ngưỡng an toàn đã chọn:
-# Tỉ lệ mở lại hiện tại là 4,25% trên toàn bộ mẫu 1.200 yêu cầu (3,97% trong phạm vi noi_dia + hang_nang). Ngưỡng an toàn dừng: nhóm trợ lý cao hơn đối chứng >= 2 điểm hoặc vượt trần 6,00%.
+# Tỉ lệ mở lại hiện tại là 4,25% trên toàn bộ mẫu 1.200 yêu cầu [simulated] (3,97% trong phạm vi noi_dia + hang_nang [simulated]). Ngưỡng an toàn dừng: nhóm trợ lý cao hơn đối chứng >= 2 điểm hoặc vượt trần 6,00%.
 
 pilot:
   owner: "Giám đốc vận hành LogiX-VN"                      # một người có tên vai trò, không ghi "cả đội"
-  scope: "Chỉ noi_dia và hang_nang (0,22x và 0,69x so với 12.000 đ, simulated); loại quoc_te (1,88x) và doi_tac (0,85x)" # loại yêu cầu nào, depot nào; dựa vào kết quả A3
+  scope: "Chỉ noi_dia và hang_nang (0,22× và 0,69× định mức [simulated]). Loại quoc_te (1,88× [simulated]) và hoãn doi_tac (54,4% thành công [simulated])."
   assignment:
     unit: "staff"                     # request | staff | depot
     control_share: 0.5
@@ -50,5 +50,7 @@ pilot:
     - "NẾU tỉ lệ bỏ qua gợi ý > 40% TRONG 1 tuần THÌ Trưởng nhóm CSKH phỏng vấn 5 nhân viên trong 3 ngày KHÔNG THÌ không được chuyển bước rollout"
   interim_looks: "Bước 4 người: chỉ theo dõi an toàn tuyệt đối; từ bước 10 người: có thể dùng ngưỡng chênh lệch 2 điểm; chỉ đánh giá chỉ số chính ở bước 20 sau khi mỗi nhân viên đạt ít nhất 299 yêu cầu (khoảng 8 ngày ở 37–38 yêu cầu/ngày) và đã đủ cửa sổ theo dõi mở lại 7 ngày cho yêu cầu cuối."
   rollback: "Giám đốc vận hành bấm cờ tắt, hiệu lực 30 phút; khách được phục vụ bằng luồng nhân viên tự làm"                   # ai bấm, mất bao lâu, khách được phục vụ bằng gì
+  review_and_rollout_gate: "Ở bước 4 người, xem lại 100% ca có gợi ý. Trưởng nhóm CSKH chỉ đề xuất giảm xem lại theo bậc khi tỉ lệ sửa + bỏ dưới 15% trong một tuần và đạt ngưỡng an toàn. PM tính chi phí toàn hệ thống theo B4, cập nhật thời gian đo được, ca chuyển nhân viên và khối lượng dự báo để phân bổ cố định. Giám đốc vận hành giữ nguyên bước nếu chưa đủ dữ liệu hoặc dự báo vượt 12.000 đ/yêu cầu. Quy tắc này áp dụng cùng các ngưỡng dừng."
+  decision_condition: "Chỉ đánh giá chỉ số chính ở bước 20 người can thiệp khi cả hai nhánh có 20 nhân viên, mỗi người có ít nhất 299 yêu cầu đủ điều kiện (5.980 yêu cầu mỗi nhánh) và các yêu cầu đã đủ cửa sổ theo dõi mở lại 7 ngày. Lùi ngày chốt nếu chưa đủ mẫu hoặc thời gian theo dõi."
   decision_date: "2027-01-05"
   simulated_inputs: ["phut_xem_lai_simulated", "phut_lam_lai_simulated", "chi_phi_moi_viec_thanh_cong_simulated", "he_so_so_voi_12000_simulated"]         # liệt kê mọi con số giả lập đã dùng
