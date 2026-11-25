@@ -29,7 +29,7 @@ pilot:
     unit: "staff"                     # request | staff | depot
     control_share: 0.5
     randomized: true
-  rollout: [0.10, 0.25, 0.50]     # mỗi bước một tuần
+  rollout: [0.10, 0.25, 0.50]     # lần lượt khoảng 4, 10, 20 nhân viên can thiệp trên tổng 40 người
   primary_metric:
     name: dong_trong_24h_khong_mo_lai_7_ngay
     baseline: 0.70
@@ -44,10 +44,11 @@ pilot:
     spillover_risk: "Giảm rủi ro chia sẻ câu trả lời trong depot bằng cách phân quyền tài khoản và log lượt mở trợ lý theo staff_id"
     predeclared: "Chỉ số chính, ngưỡng dừng an toàn, luật dừng và ngày quyết định được chốt và ký duyệt trước khi pilot khởi chạy"
   stop_rules:
-    - "NẾU mở lại 7 ngày của nhóm trợ lý cao hơn đối chứng >= 2 điểm hoặc vượt 6%, hoặc có >= 1 ca hoàn trùng TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành tắt trợ lý trong 30 phút KHÔNG THÌ không được sang bước rollout tiếp"
-    - "NẾU chi phí mỗi việc thành công > 8.000 đ TRONG 2 tuần liên tiếp THÌ PM thu hẹp về noi_dia và giới hạn 2 lần chạy KHÔNG THÌ không được mở hang_nang"
+    - "NẾU tỉ lệ mở lại vượt 6%, có >= 1 ca hoàn trùng cùng yêu cầu, hoặc đã báo khách hoàn nhưng sổ cái chưa ghi TRONG bất kỳ bước rollout nào THÌ Giám đốc vận hành tắt trợ lý trong 30 phút KHÔNG THÌ không được sang bước tiếp"
+    - "NẾU từ bước 10 nhân viên can thiệp trở lên, tỉ lệ mở lại nhóm trợ lý cao hơn đối chứng >= 2 điểm TRONG 3 ngày liên tiếp THÌ Giám đốc vận hành tắt trợ lý trong 30 phút KHÔNG THÌ không được sang bước tiếp"
+    - "NẾU chi phí vận hành mỗi việc thành công (token/tool và giờ nhân viên, chưa gồm 40 triệu chi phí cố định tháng) > 8.000 đ TRONG 2 tuần liên tiếp THÌ PM thu hẹp về noi_dia và giới hạn 2 lần chạy KHÔNG THÌ không được mở hang_nang"
     - "NẾU tỉ lệ bỏ qua gợi ý > 40% TRONG 1 tuần THÌ Trưởng nhóm CSKH phỏng vấn 5 nhân viên trong 3 ngày KHÔNG THÌ không được chuyển bước rollout"
-  interim_looks: "chỉ kiểm tra chỉ số an toàn"
+  interim_looks: "Bước 4 người: chỉ theo dõi an toàn tuyệt đối; từ bước 10 người: có thể dùng ngưỡng chênh lệch 2 điểm; chỉ đánh giá chỉ số chính ở bước 20 sau khi mỗi nhân viên đạt ít nhất 299 yêu cầu (khoảng 8 ngày ở 37–38 yêu cầu/ngày) và đã đủ cửa sổ theo dõi mở lại 7 ngày cho yêu cầu cuối."
   rollback: "Giám đốc vận hành bấm cờ tắt, hiệu lực 30 phút; khách được phục vụ bằng luồng nhân viên tự làm"                   # ai bấm, mất bao lâu, khách được phục vụ bằng gì
   decision_date: "2027-01-05"
   simulated_inputs: ["phut_xem_lai_simulated", "phut_lam_lai_simulated", "chi_phi_moi_viec_thanh_cong_simulated", "he_so_so_voi_12000_simulated"]         # liệt kê mọi con số giả lập đã dùng

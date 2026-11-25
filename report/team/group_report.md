@@ -35,7 +35,7 @@ Báo cáo ngắn gọn (tối đa 2 trang). Số liệu chi tiết nằm trong c
 ## 5. Khó khăn và cách xử lý
 
 - *Khó khăn về cỡ mẫu cụm:* Với 40 nhân viên (20 người/nhóm), cỡ mẫu hiệu dụng tối đa chỉ đạt 1.000, không đủ phát hiện mức chênh 5 điểm ($n=1.251$).
-- *Cách xử lý:* Nhóm chấp nhận đánh đổi (trade-off) nâng MDE lên 6 điểm ($n=859$), yêu cầu mỗi nhân viên xử lý $m \ge 299$ yêu cầu để duy trì thiết kế ngẫu nhiên cấp nhân viên, tránh rủi ro tràn tác động (spillover) khi chia theo từng yêu cầu.
+- *Cách xử lý:* Nhóm chấp nhận đánh đổi (trade-off) nâng MDE lên 6 điểm ($n=859$), yêu cầu mỗi nhân viên xử lý $m \ge 299$ yêu cầu để duy trì thiết kế ngẫu nhiên cấp nhân viên, tránh rủi ro tràn tác động (spillover) khi chia theo từng yêu cầu. Ở bước 20 nhân viên can thiệp, cần khoảng 8 ngày để mỗi người đạt 299 yêu cầu; sau đó chờ đủ cửa sổ mở lại 7 ngày của yêu cầu cuối trước khi chốt chỉ số chính.
 
 ## 6. Tổng hợp đóng góp
 
