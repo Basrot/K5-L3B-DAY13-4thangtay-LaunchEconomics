@@ -19,15 +19,14 @@
 
 - Hoàn thiện Nhiệm vụ C trong `report/team/bang_loi.md`: gắn đủ 20 ca lỗi theo 5 loại Google PAIR dựa trên nguyên nhân gốc (phân bố 4/5/4/4/3), đối chiếu với Người 4 đạt đồng thuận **20/20 = 100%**, chốt 5 quy tắc phân biệt cho các ca dễ lẫn, và chuẩn hóa bảng khắc phục 5 ca có đủ event đo được, ngưỡng và tần suất đồng bộ 100% với `report/team/chi_so.md`.
 - Hoàn thiện và đối chiếu chốt 100% Nhiệm vụ E1–E2 trong `report/team/chi_so.md`: khớp hoàn toàn 3 chỉ số E1 từ đầu ra `src/lab13.py` của Người 2 (`82,83%`, `27,12%`, `4,25%`; phạm vi pilot `3,97%`), đề xuất thêm 1 chỉ số Dùng và 1 chỉ số An toàn, thiết kế 11 event đều có `trace_id`, kiểm tra chéo 5/5 chỉ số đều đo được, và lập 3 dòng rủi ro kinh tế E2 lấy số từ bảng B1/B3/B4/A4 trong `report/team/bang_chi_phi.md` (đều gắn nhãn `simulated`).
-- Rà soát chất lượng (QA) toàn bộ hồ sơ nhóm sau PR #2, #3, #4: xác nhận 5 câu D2, 3 luật dừng và cú pháp không còn dấu `?` trong `report/team/pilot_plan.yaml`; kiểm tra 0 từ cấm trong `report/team/` và `TEAM.md`; tổng hợp danh sách các điểm cần chỉnh trên `bang_chi_phi.md`, `ho_so_launch_v0.md`, `group_report.md`, `TEAM.md` và nhắc bổ sung báo cáo cá nhân Người 1.
-- *(Tại buổi duyệt chéo 17:00–17:45)* Tham gia phản biện phần lỗi và chỉ số Gate 2a, soát đủ 4 báo cáo cá nhân trước khi chốt nộp.
+- Rà soát chất lượng (QA) và hoàn thiện đồng bộ toàn bộ hồ sơ nhóm trước mốc 17:00 Gate 2a: xác nhận 5 câu D2, 3 luật dừng và cú pháp không còn dấu `?` trong `report/team/pilot_plan.yaml`; kiểm tra không có từ cấm và mọi mục đều ghi một vai trò phụ trách cụ thể; bổ sung đầy đủ thông tin trong `TEAM.md`, sửa công thức hệ thống & khôi phục tiêu đề A4 + nhãn `simulated` trên `report/team/bang_chi_phi.md`, bổ sung nhãn `simulated` trên `report/team/group_report.md`, và hoàn thiện các điều kiện bất lợi + vai trò vận hành nhất quán trong `report/team/ho_so_launch_v0.md`.
+- *(Tại buổi duyệt chéo 17:00–17:45)* Tham gia phản biện phần lỗi và chỉ số Gate 2a, phối hợp chốt `report/team/phieu_cham.md` từ buổi chấm thật.
 
 ## 4. Bằng chứng
 
-- Nhánh làm việc: `2A202603779_DaoNgocHan` (đồng bộ `origin/main` tại commit `20a5efb`, tạo Pull Request vào `main`).
-- File `report/team/bang_loi.md`: đủ 2 bộ nhãn 20 ca (đồng thuận 20/20 = 100%), 5 quy tắc phân biệt ranh giới, bảng khắc phục 5 ca đủ 5 loại có event/ngưỡng/tần suất và vai trò phụ trách.
-- File `report/team/chi_so.md`: 5 chỉ số E1 (3 chỉ số tính thử khớp `src/lab13.py` + 2 chỉ số tự đề xuất), 11 event có `trace_id`, kiểm tra chéo 5/5 chỉ số đo được, 3 dòng rủi ro kinh tế E2 gắn nhãn `simulated`.
-- File báo cáo cá nhân: `report/team/2A202603779_DaoNgocHan.md`.
+- Nhánh làm việc: `2A202603779_DaoNgocHan` (PR #5 đã merge vào `main` tại commit `a3d3e7d`, kèm commit rà soát QA cuối buổi).
+- File chủ trì: `report/team/bang_loi.md` (20/20 ca đồng thuận 100%, 5 quy tắc ranh giới, 5 ca khắc phục có event/ngưỡng/tần suất), `report/team/chi_so.md` (5 chỉ số E1 khớp `src/lab13.py`, 11 event có `trace_id`, 3 dòng rủi ro kinh tế E2 gắn nhãn `simulated`), `report/team/2A202603779_DaoNgocHan.md`.
+- File rà soát QA: `TEAM.md`, `report/team/bang_chi_phi.md`, `report/team/group_report.md`, `report/team/ho_so_launch_v0.md`.
 
 ## 5. Công cụ AI đã dùng
 
