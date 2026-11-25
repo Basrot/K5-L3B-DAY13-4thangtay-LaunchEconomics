@@ -24,27 +24,27 @@ Số tính từ CSV bằng `src/lab13.py`. Các chi phí dựa trên phút `_sim
 | Chi phí mỗi việc thành công | 4.472 | tổng / 978 | simulated |
 | Token + tool / 1.200 yêu cầu | 274,7 | trace | đo từ trace |
 
-CPS gấp **16,3 lần** hóa đơn token + tool chia số yêu cầu. Làm lại là khoản lớn nhất (**51,8%**), kế đến xem lại (**40,7%**) (`simulated`). Tính cả 148 yêu cầu chuyển nhân viên: (4.373.585 + 148 × 12.000) / 1.200 = **5.865 đ/yêu cầu = 0,49×** baseline (`simulated`).
+CPS gấp **16,3 lần** hóa đơn token + tool chia số yêu cầu. Làm lại là khoản lớn nhất (**51,8%**), kế đến xem lại (**40,7%**) (`simulated`). Tính cả 222 yêu cầu không thành công (148 `chuyen_nhan_vien` + 74 `lam_lai` nhân viên phải xử lý thay, đồng nhất với bảng B3): (4.373.585 + 222 × 12.000) / 1.200 = **5.865 đ/yêu cầu = 0,49×** baseline (`simulated`).
 
 ## A3 · Theo loại yêu cầu
 
-| Loại | Số yêu cầu | Tỉ lệ thành công | Lần chạy/yêu cầu | CPS | So với 12.000 đ |
+| Loại | Số yêu cầu | Tỉ lệ thành công | Lần chạy/yêu cầu | CPS `[simulated]` | So với 12.000 đ `[simulated]` |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| `noi_dia` | 824 | 95,0% | 1,11 | 2.696 đ | 0,22× |
-| `hang_nang` | 158 | 74,1% | 1,47 | 8.221 đ | 0,69× |
-| `quoc_te` | 150 | 27,3% | 2,32 | 22.515 đ | 1,88× |
-| `doi_tac` | 68 | 54,4% | 1,88 | 10.215 đ | 0,85× |
+| `noi_dia` | 824 | 95,0% | 1,11 | 2.696 đ `[simulated]` | 0,22× `[simulated]` |
+| `hang_nang` | 158 | 74,1% | 1,47 | 8.221 đ `[simulated]` | 0,69× `[simulated]` |
+| `quoc_te` | 150 | 27,3% | 2,32 | 22.515 đ `[simulated]` | 1,88× `[simulated]` |
+| `doi_tac` | 68 | 54,4% | 1,88 | 10.215 đ `[simulated]` | 0,85× `[simulated]` |
 
-`quoc_te` không đáng xử lý: CPS **22.515 đ (1,88×)**, chỉ 27,3% thành công. Tỉ lệ lần chạy `ok` ở attempt 1/2/3 là 30,0%/11,4%/2,2%; chạy lại không giúp đáng kể.
+`quoc_te` không đáng xử lý: CPS **22.515 đ (1,88×)** và chỉ thành công 27,3% `[simulated]`. Tỉ lệ lần chạy `ok` ở attempt 1/2/3 giảm mạnh (30,0% → 11,4% → 2,2%); trần 1→2 lần chỉ nâng số thành công 32→41/150 (CPS 20.403→20.605 đ), còn lần 3 không thêm ca thành công mà đẩy CPS lên 22.515 đ `[simulated]`.
 
-- `quoc_te` không đáng xử lý: 22.515đ/việc thành công, **1,88×** baseline và chỉ thành công 27,3%. Trần 1→2 lần tăng số thành công 32→41/150 nhưng CPS tăng 20.403→20.605đ; lần 3 không thêm thành công, CPS 22.515đ [simulated].
+## A4 · Chi phí cố định (phạm vi `noi_dia` + `hang_nang`)
 
-Theo cách tính trong bài mẫu, sản lượng thành công quy đổi là 45.000 × 900/1.200 = 33.750 việc/tháng. CPS biến đổi của phạm vi cộng theo output A4 trong code.
+Theo cách tính trong bài mẫu, sản lượng thành công quy đổi trong phạm vi là 45.000 × 900/1.200 = 33.750 việc/tháng. CPS biến đổi của phạm vi là 3.414 đ `[simulated]`, cộng thêm chi phí cố định 40 triệu đ/tháng theo output A4 trong code.
 
-| Khối lượng | Việc thành công/tháng | Cố định/việc | CPS gồm cố định | So với baseline |
+| Khối lượng | Việc thành công/tháng | Cố định/việc | CPS gồm cố định `[simulated]` | So với baseline `[simulated]` |
 | --- | ---: | ---: | ---: | ---: |
-| 45.000 yêu cầu/tháng | 33.750 | 1.185 đ | 4.599 đ | 0,38× |
-| Nửa khối lượng | 16.875 | 2.370 đ | 5.784 đ | 0,48× |
+| 45.000 yêu cầu/tháng | 33.750 | 1.185 đ | 4.599 đ `[simulated]` | 0,38× `[simulated]` |
+| Nửa khối lượng | 16.875 | 2.370 đ | 5.784 đ `[simulated]` | 0,48× `[simulated]` |
 
 Chi phí cố định không đổi kết luận ở hai mức này; cả hai đều dưới baseline 12.000 đ (`simulated`).
 
