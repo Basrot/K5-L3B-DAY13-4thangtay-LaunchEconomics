@@ -23,7 +23,7 @@ Nhóm xây dựng hồ sơ Gate 2a để quyết định có nên thử nghiệm
 
 - **A · Chi phí.** Ba phép thử A1 đạt **1,20 · 1,25 · 1,25**. Agent xử lý thành công 978/1.200 yêu cầu với chi phí **4.472 đ/việc thành công**. Chi phí cả hệ thống là **5.865 đ/yêu cầu**, sau khi cộng phần nhân viên xử lý các ca agent không hoàn thành (`simulated`). [Mã tính A1–A4](../../src/lab13.py)
 - **B · Độ nhạy.** Giới hạn **2 lượt** cho tổng chi phí hệ thống thấp nhất, **6.901.220 đ** cho 1.200 yêu cầu. Khi xem lại toàn bộ ca có lượt `ok` trong phạm vi nội địa và hàng nặng, chi phí đạt **11.743–12.415 đ/việc thành công**, tùy thời lượng làm lại (`simulated`). [Mã tính B1–B4](../../src/lab13.py)
-- **C.** Hai bộ nhãn nộp ở PR #3 và #4 trùng **20/20 ca (100%)**. Bảng có năm biện pháp khắc phục. Hạnh đã ghi xác nhận gắn độc lập trong báo cáo cá nhân. Phần của Khang chờ xác nhận. [Bảng lỗi](bang_loi.md)
+- **C.** Hai bộ nhãn nộp ở PR #3 và #4 trùng **20/20 ca (100%)**. Bảng có năm biện pháp khắc phục. Hạnh và Khang gắn nhãn độc lập trước khi đối chiếu theo xác nhận của nhóm trưởng. [Bảng lỗi](bang_loi.md)
 - **D.** Kế hoạch chia **20 nhân viên mỗi nhánh**. Với MDE 6 điểm, thu **5.980 yêu cầu mỗi nhánh** (859 hiệu dụng) và chờ đủ bảy ngày theo dõi sau đóng. Power khoảng 64% nếu chênh thực là 5 điểm. [Kế hoạch pilot](pilot_plan.yaml)
 - **E.** Ba chỉ số mô tả lần lượt là đóng đúng hạn và không mở lại **82,83%**, sửa hoặc bỏ gợi ý **27,12%**, mở lại **4,25%**. Đặc tả có 12 event. Hồ sơ đề xuất **No-go** vì xem lại toàn bộ làm chi phí cả hệ thống lên **12.850–13.559 đ/yêu cầu** gồm thủ công và cố định, trên định mức 12.000 đ (`simulated`). [Đặc tả chỉ số](chi_so.md) · [Hồ sơ launch](ho_so_launch_v0.md)
 
